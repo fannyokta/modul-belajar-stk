@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barisan dan Deret · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-7">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item active" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 7</p>
+<h1>Barisan dan Deret</h1>
+<p class="sub">Folgen und Reihen</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#71-barisan-dan-deret-aritmetika-arithmetische-folge">7.1 Barisan dan deret aritmetika (arithmetische Folge)</a></li><li><a href="#72-barisan-dan-deret-geometri-geometrische-folge">7.2 Barisan dan deret geometri (geometrische Folge)</a></li><li><a href="#73-notasi-sigma-dan-jumlah-penting">7.3 Notasi sigma dan jumlah penting</a></li><li><a href="#74-konvergensi-barisan-dan-bunga-majemuk">7.4 Konvergensi barisan dan bunga majemuk</a></li><li><a href="#75-pembuktian-dengan-induksi-vollstandige-induktion">7.5 Pembuktian dengan induksi (vollständige Induktion)</a></li><li><a href="#latihan-7">Latihan 7</a></li></ul></aside><p><strong>Folge</strong> adalah daftar bilangan berurutan a₁, a₂, a₃, …, dan <strong>Reihe</strong> adalah jumlahnya. Materi ini mungkin sudah kamu kenal sebelumnya, tetapi di Jerman sering dibutuhkan lagi untuk bunga majemuk, deret tak hingga, dan pembuktian.</p>
+<h3 id="71-barisan-dan-deret-aritmetika-arithmetische-folge">7.1 Barisan dan deret aritmetika (arithmetische Folge)</h3>
+<p>Selisih antarsuku tetap, yaitu <strong>d</strong>.</p>
+<div class="tex">a_n = a_1 + (n-1)\,d, \qquad S_n = \frac{n}{2}\,(a_1 + a_n) = \frac{n}{2}\,\big(2a_1 + (n-1)d\big)</div>
+<div class="example"><p><strong>Contoh 1.</strong> a₁ = 5 dan d = 3. Maka a₂₀ = 5 + 19·3 = 62 dan S₂₀ = 10 · (5 + 62) = 670.</p></div>
+<h3 id="72-barisan-dan-deret-geometri-geometrische-folge">7.2 Barisan dan deret geometri (geometrische Folge)</h3>
+<p>Rasio antarsuku tetap, yaitu <strong>q</strong>.</p>
+<div class="tex">a_n = a_1\, q^{\,n-1}, \qquad S_n = a_1 \cdot \frac{1 - q^n}{1 - q} \quad (q \neq 1)</div>
+<p>Deret geometri tak hingga <strong>konvergen</strong> hanya jika |q| &lt; 1, dan jumlahnya:</p>
+<div class="tex">S_\infty = \frac{a_1}{1 - q}</div>
+<div class="example"><p><strong>Contoh 2.</strong> a₁ = 3 dan q = 2. Maka a₈ = 3 · 2⁷ = 384 dan S₈ = 3 · (2⁸ − 1)/(2 − 1) = 765.</p></div>
+<div class="example"><p><strong>Contoh 3 (tak hingga).</strong> 1 + 1/2 + 1/4 + … mempunyai a₁ = 1 dan q = 1/2, jadi S = 1/(1 − 1/2) = 2.</p></div>
+<div class="example"><p><strong>Contoh 4 (desimal berulang).</strong> 0,333… = 0,3 + 0,03 + 0,003 + … dengan a₁ = 0,3 dan q = 0,1, jadi S = 0,3/0,9 = 1/3.</p></div>
+<div class="example"><p><strong>Contoh 5 (bola memantul).</strong> Bola dijatuhkan dari 10 m dan tiap pantulan mencapai 60% tinggi sebelumnya. Tinggi pantulan: 6; 3,6; … berjumlah 6/(1 − 0,6) = 15 m. Tiap pantulan menempuh naik dan turun, jadi jarak total = 10 + 2 · 15 = 40 m.</p></div>
+<h3 id="73-notasi-sigma-dan-jumlah-penting">7.3 Notasi sigma dan jumlah penting</h3>
+<div class="tex">\sum_{k=1}^{n} k = \frac{n(n+1)}{2}, \qquad \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}, \qquad \sum_{k=1}^{n} c = n\,c</div>
+<p>Notasi sigma bersifat linear: Σ(a·uₖ + b·vₖ) = a·Σuₖ + b·Σvₖ.</p>
+<div class="example"><p><strong>Contoh 6.</strong> Σ dari k = 1 sampai 10 dari (2k + 1) = 2 · 55 + 10 = 120.</p></div>
+<h3 id="74-konvergensi-barisan-dan-bunga-majemuk">7.4 Konvergensi barisan dan bunga majemuk</h3>
+<p>Barisan konvergen ke L jika aₙ mendekati L untuk n → ∞ (teknik sama dengan Bab 4).</p>
+<div class="example"><p><strong>Contoh 7.</strong> aₙ = (3n + 1)/(n + 2). Bagi dengan n: (3 + 1/n)/(1 + 2/n) → 3.</p></div>
+<p><strong>Bunga majemuk (Zinseszins):</strong> modal K₀ dengan bunga p per periode menjadi Kₙ = K₀ · (1 + p)ⁿ.</p>
+<div class="example"><p><strong>Contoh 8.</strong> €5.000 dengan bunga 3% per tahun selama 8 tahun menjadi 5.000 · 1,03⁸ ≈ €6.333,85.</p></div>
+<h3 id="75-pembuktian-dengan-induksi-vollstandige-induktion">7.5 Pembuktian dengan induksi (vollständige Induktion)</h3>
+<p>Berguna untuk membuktikan rumus yang berlaku untuk semua n ∈ ℕ. Tiga langkah: <strong>Induktionsanfang</strong> (cek n = 1), <strong>Induktionsannahme</strong> (anggap benar untuk n), <strong>Induktionsschritt</strong> (buktikan benar untuk n + 1).</p>
+<div class="example"><p><strong>Contoh 9.</strong> Buktikan 1 + 2 + … + n = n(n+1)/2.</p><p>Anfang: untuk n = 1, kiri = 1 dan kanan = 1·2/2 = 1. Annahme: anggap berlaku untuk n. Schritt: untuk n + 1, jumlah = n(n+1)/2 + (n+1) = (n+1)(n/2 + 1) = (n+1)(n+2)/2. Itu persis rumus untuk n + 1. Terbukti.</p></div>
+
+<h3 id="latihan-7">Latihan 7</h3>
+<ul>
+<li><strong>7.1</strong> Pada barisan aritmetika a₃ = 11 dan a₇ = 23. Tentukan a₁, d, dan S₁₀.</li>
+<li><strong>7.2</strong> Hitung 3 + 7 + 11 + … + 83.</li>
+<li><strong>7.3</strong> Pada barisan geometri a₂ = 6 dan a₅ = 48. Tentukan q, a₁, dan S₆.</li>
+<li><strong>7.4</strong> Hitung 8 + 4 + 2 + 1 + … (tak hingga).</li>
+<li><strong>7.5</strong> Ubah 0,636363… menjadi pecahan.</li>
+<li><strong>7.6</strong> Bola dijatuhkan dari 20 m dan tiap pantulan mencapai 75% tinggi sebelumnya. Hitung jarak total yang ditempuh sampai berhenti.</li>
+<li><strong>7.7</strong> Hitung Σ dari k = 1 sampai 20 dari (3k − 2).</li>
+<li><strong>7.8</strong> Tentukan limit (a) (4n² + 1)/(2n² − n) dan (b) (1 + 3/n)ⁿ untuk n → ∞.</li>
+<li><strong>7.9</strong> Tabungan €2.000 berbunga majemuk 4% per tahun. Berapa tahun penuh sampai saldo minimal €3.000? Beri Antwortsatz.</li>
+<li><strong>7.10</strong> Buktikan dengan induksi: 1 + 3 + 5 + … + (2n − 1) = n².</li>
+</ul><div class="actions"><a class="btn" href="kunci.html#kunci-latihan-7-barisan-dan-deret">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="bab-6.html"><small>Sebelumnya</small><span>Integral</span></a><a class="pn-next" href="bab-8.html"><small>Berikutnya</small><span>Vektor dan Geometri Analitik</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Limit dan Kekontinuan · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-4">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item active" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 4</p>
+<h1>Limit dan Kekontinuan</h1>
+<p class="sub">Grenzwerte und Stetigkeit</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#41-gagasan-limit">4.1 Gagasan limit</a></li><li><a href="#42-teknik-menghitung-limit">4.2 Teknik menghitung limit</a></li><li><a href="#43-kekontinuan-stetigkeit">4.3 Kekontinuan (Stetigkeit)</a></li><li><a href="#latihan-4">Latihan 4</a></li></ul></aside><p>Limit adalah jembatan menuju turunan dan integral. Kamu tidak perlu bukti formal ε-δ; yang dibutuhkan adalah keterampilan menghitung limit dan memahami artinya secara grafis.</p>
+<h3 id="41-gagasan-limit">4.1 Gagasan limit</h3>
+<div class="tex">\lim_{x \to x_0} f(x) = L</div>
+<p>Artinya: nilai f(x) mendekati L ketika x mendekati x₀, tanpa harus sama dengan x₀. Limit sepihak ditulis lim dari kiri (<strong>linksseitiger Grenzwert</strong>) dan lim dari kanan (<strong>rechtsseitiger Grenzwert</strong>). Limit ada jika keduanya ada dan sama.</p>
+<p>Untuk x → ±∞, limit menggambarkan asimtot datar. Jika f(x) membesar tak terbatas dekat suatu titik, limitnya ±∞ (asimtot tegak).</p>
+<h3 id="42-teknik-menghitung-limit">4.2 Teknik menghitung limit</h3>
+<ol>
+<li><strong>Substitusi langsung.</strong> Jika hasilnya angka biasa, selesai.</li>
+<li><strong>Bentuk 0/0:</strong> faktorkan lalu coret, atau kalikan sekawan (<strong>konjugat</strong>) jika ada akar.</li>
+<li><strong>x → ∞ pada pecahan:</strong> bagi pembilang dan penyebut dengan pangkat x tertinggi.</li>
+<li><strong>Limit istimewa</strong> yang perlu dihafal:</li>
+</ol>
+<div class="tex">\lim_{x \to 0} \frac{\sin x}{x} = 1, \qquad \lim_{x \to \infty} \left(1 + \frac{k}{x}\right)^x = e^k, \qquad \lim_{x \to \infty} x^n e^{-x} = 0, \qquad \lim_{x \to \infty} \frac{\ln x}{x} = 0</div>
+<div class="example"><p><strong>Contoh 1 (faktorisasi).</strong> lim (x² − 4)/(x − 2) untuk x → 2.</p><p>Substitusi memberi 0/0. Faktorkan: (x − 2)(x + 2)/(x − 2) = x + 2, jadi limitnya 4.</p></div>
+
+<div class="example"><p><strong>Contoh 2 (konjugat).</strong> lim (√(x+4) − 2)/x untuk x → 0.</p><p>Kalikan dengan (√(x+4) + 2)/(√(x+4) + 2): pembilang menjadi (x + 4) − 4 = x. Maka ungkapannya x/(x(√(x+4) + 2)) = 1/(√(x+4) + 2), dan limitnya 1/4.</p></div>
+
+<div class="example"><p><strong>Contoh 3 (tak hingga).</strong> lim (3x² + x)/(2x² − 5) untuk x → ∞.</p><p>Bagi dengan x²: (3 + 1/x)/(2 − 5/x²) → 3/2.</p></div>
+
+<div class="example"><p><strong>Contoh 4 (sinus).</strong> lim sin(3x)/x untuk x → 0.</p><p>Tulis sin(3x)/x = 3 · sin(3x)/(3x). Karena sin(u)/u → 1 untuk u → 0, limitnya 3.</p></div>
+
+<div class="example"><p><strong>Contoh 5 (sepihak).</strong> f(x) = 1/(x − 1) di x = 1.</p><p>Dari kanan (x &gt; 1) nilainya +∞, dari kiri (x &lt; 1) nilainya −∞. Limitnya tidak ada, dan x = 1 adalah Polstelle.</p></div>
+
+<h3 id="43-kekontinuan-stetigkeit">4.3 Kekontinuan (Stetigkeit)</h3>
+<p>Fungsi f kontinu di x₀ jika tiga hal terpenuhi: f(x₀) ada, limit di x₀ ada, dan keduanya sama.</p>
+<div class="tex">\lim_{x \to x_0^-} f(x) = \lim_{x \to x_0^+} f(x) = f(x_0)</div>
+<p>Secara gambar: grafik bisa digambar tanpa mengangkat pensil. Polinom, eksponen, sinus, dan kosinus kontinu di mana-mana; fungsi rasional kontinu di seluruh 𝔻.</p>
+<div class="example"><p><strong>Contoh 6 (mencari parameter).</strong> f(x) = x² + a untuk x &lt; 1, dan f(x) = 3x − 1 untuk x ≥ 1. Tentukan a agar f kontinu di x = 1.</p><p>Limit kiri: 1 + a. Nilai f(1) = 3 − 1 = 2. Samakan keduanya: 1 + a = 2, jadi a = 1.</p></div>
+
+<p><strong>Zwischenwertsatz</strong> (teorema nilai antara): jika f kontinu pada [a; b] dan f(a), f(b) berbeda tanda, maka ada setidaknya satu nol di antara a dan b.</p>
+<div class="example"><p><strong>Contoh 7.</strong> Tunjukkan x³ + x − 1 = 0 punya solusi di (0; 1).</p><p>f(0) = −1 &lt; 0 dan f(1) = 1 &gt; 0, dan f kontinu. Jadi menurut teorema nilai antara ada nol di (0; 1).</p></div>
+
+<h3 id="latihan-4">Latihan 4</h3>
+<ul>
+<li><strong>4.1</strong> lim (x² − 9)/(x − 3) untuk x → 3.</li>
+<li><strong>4.2</strong> lim (x² − 3x + 2)/(x² − 1) untuk x → 1.</li>
+<li><strong>4.3</strong> lim (√(x+9) − 3)/x untuk x → 0.</li>
+<li><strong>4.4</strong> lim (4x³ − x)/(2x³ + 7x²) untuk x → ∞.</li>
+<li><strong>4.5</strong> lim (5x + 1)/(x² + 3) untuk x → ∞.</li>
+<li><strong>4.6</strong> lim sin(5x)/(2x) untuk x → 0.</li>
+<li><strong>4.7</strong> lim (1 + 2/x)ˣ untuk x → ∞.</li>
+<li><strong>4.8</strong> Tentukan limit kiri dan kanan f(x) = 1/(x + 2) di x = −2.</li>
+<li><strong>4.9</strong> Tentukan a agar f kontinu di x = 2, dengan f(x) = x² − ax untuk x &lt; 2 dan f(x) = 5 − x untuk x ≥ 2.</li>
+<li><strong>4.10</strong> Tunjukkan bahwa cos x = x punya solusi di (0; 1). (Petunjuk: pakai g(x) = cos x − x dan kalkulator mode RAD.)</li>
+<li><strong>4.11</strong> lim (√(x² + x) − x) untuk x → ∞. (Petunjuk: kalikan dengan konjugat.)</li>
+</ul><div class="actions"><a class="btn" href="kunci.html#kunci-latihan-4-limit">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="bab-3.html"><small>Sebelumnya</small><span>Trigonometri</span></a><a class="pn-next" href="bab-5.html"><small>Berikutnya</small><span>Turunan dan Kurvendiskussion</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

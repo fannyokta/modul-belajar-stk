@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integral · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-6">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item active" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 6</p>
+<h1>Integral</h1>
+<p class="sub">Integralrechnung</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#61-stammfunktion-dan-integral-tak-tentu">6.1 Stammfunktion dan integral tak tentu</a></li><li><a href="#62-integral-tentu-dan-hauptsatz">6.2 Integral tentu dan Hauptsatz</a></li><li><a href="#63-luas-daerah-flachenberechnung">6.3 Luas daerah (Flächenberechnung)</a></li><li><a href="#64-teknik-integrasi">6.4 Teknik integrasi</a></li><li><a href="#65-volume-benda-putar-rotationskorper">6.5 Volume benda putar (Rotationskörper)</a></li><li><a href="#66-integral-tak-wajar-uneigentliche-integrale">6.6 Integral tak wajar (Uneigentliche Integrale)</a></li><li><a href="#latihan-6">Latihan 6</a></li></ul></aside><p>Integral adalah kebalikan turunan sekaligus alat untuk menghitung luas, volume, dan besaran yang terakumulasi. Di T-Kurs soalnya biasanya berupa luas daerah, volume benda putar, dan teknik substitusi atau integrasi parsial.</p>
+<h3 id="61-stammfunktion-dan-integral-tak-tentu">6.1 Stammfunktion dan integral tak tentu</h3>
+<p>Fungsi F disebut <strong>Stammfunktion</strong> (antiturunan) dari f jika F′(x) = f(x). Himpunan semua antiturunan ditulis dengan konstanta C:</p>
+<div class="tex">\int f(x)\,dx = F(x) + C</div>
+<p>Antiturunan yang perlu hafal:</p>
+<ul>
+<li>∫ xⁿ dx = xⁿ⁺¹/(n+1) + C untuk n ≠ −1</li>
+<li>∫ 1/x dx = ln|x| + C</li>
+<li>∫ eˣ dx = eˣ + C, dan ∫ e^(ax) dx = e^(ax)/a + C</li>
+<li>∫ sin x dx = −cos x + C, dan ∫ cos x dx = sin x + C</li>
+<li>∫ sin(ax + b) dx = −cos(ax + b)/a + C, dan ∫ cos(ax + b) dx = sin(ax + b)/a + C</li>
+<li>∫ (ax + b)ⁿ dx = (ax + b)ⁿ⁺¹/(a(n+1)) + C</li>
+<li>∫ 1/(ax + b) dx = ln|ax + b|/a + C</li>
+</ul>
+<p>Cara memeriksa: turunkan hasilnya, harus kembali ke fungsi semula.</p>
+<h3 id="62-integral-tentu-dan-hauptsatz">6.2 Integral tentu dan Hauptsatz</h3>
+<div class="tex">\int_a^b f(x)\,dx = F(b) - F(a) = \Big[F(x)\Big]_a^b</div>
+<p>Ini disebut <strong>Hauptsatz der Differential- und Integralrechnung</strong>. Nilai integral tentu adalah luas <strong>bertanda</strong> (<strong>orientierter Flächeninhalt</strong>): bagian di bawah sumbu x dihitung negatif. Sifat penting: ∫ₐᵇ f = −∫ᵇₐ f, dan ∫ₐᶜ f = ∫ₐᵇ f + ∫ᵇᶜ f.</p>
+<div class="example"><p><strong>Contoh 1.</strong> ∫₀² (3x² − 2x + 1) dx = [x³ − x² + x] dari 0 sampai 2 = (8 − 4 + 2) − 0 = 6.</p></div>
+<div class="example"><p><strong>Contoh 2.</strong> ∫₀^π sin x dx = [−cos x] dari 0 sampai π = (−cos π) − (−cos 0) = 1 + 1 = 2.</p></div>
+<p><strong>Nilai rata-rata</strong> (<strong>Mittelwert</strong>) fungsi pada [a; b] adalah (1/(b − a)) · ∫ₐᵇ f(x) dx.</p>
+<h3 id="63-luas-daerah-flachenberechnung">6.3 Luas daerah (Flächenberechnung)</h3>
+<p>Aturan inti: <strong>luas selalu positif</strong>, jadi jika grafik memotong sumbu x di dalam interval, pecah integralnya di setiap nol lalu ambil nilai mutlak tiap bagian.</p>
+<ul>
+<li><strong>Antara grafik dan sumbu x:</strong> cari nol dulu, integralkan per bagian, jumlahkan nilai mutlaknya.</li>
+<li><strong>Antara dua grafik f dan g:</strong> cari titik potong (f = g) sebagai batas, lalu integralkan (atas − bawah).</li>
+</ul>
+<div class="example"><p><strong>Contoh 3.</strong> Luas antara f(x) = x² − 4 dan sumbu x.</p><p>Nol: x = ±2. Pada (−2; 2) grafik berada di bawah sumbu x. ∫₋₂² (x² − 4) dx = [x³/3 − 4x] dari −2 sampai 2 = (8/3 − 8) − (−8/3 + 8) = −32/3. Luasnya adalah nilai mutlaknya: <strong>32/3</strong>.</p></div>
+
+<div class="example"><p><strong>Contoh 4.</strong> Luas antara f(x) = x² dan g(x) = 2x + 3.</p><p>Titik potong: x² = 2x + 3, jadi x² − 2x − 3 = 0 dan x = −1 atau x = 3. Di antara keduanya g berada di atas f. A = ∫₋₁³ (2x + 3 − x²) dx = [x² + 3x − x³/3] dari −1 sampai 3 = 9 − (−5/3) = <strong>32/3</strong>.</p></div>
+
+<div class="example"><p><strong>Contoh 5 (hati-hati tanda).</strong> ∫₀^(2π) sin x dx = 0, tetapi luas antara grafik sin x dan sumbu x pada [0; 2π] adalah 2 + 2 = <strong>4</strong>, karena bagian di bawah sumbu x harus dihitung terpisah.</p></div>
+<h3 id="64-teknik-integrasi">6.4 Teknik integrasi</h3>
+<p><strong>Substitution</strong> (kebalikan Kettenregel). Untuk ∫ f(g(x)) · g′(x) dx, misalkan u = g(x) sehingga du = g′(x) dx:</p>
+<div class="tex">\int f(g(x))\,g'(x)\,dx = \int f(u)\,du</div>
+<p>Pada integral tentu, ubah juga batasnya ke peubah u, atau kembalikan ke x sebelum memasukkan batas.</p>
+<div class="example"><p><strong>Contoh 6.</strong> ∫ 2x e^(x²) dx. Misal u = x², du = 2x dx. Maka ∫ e^u du = e^u + C = e^(x²) + C.</p></div>
+<div class="example"><p><strong>Contoh 7.</strong> ∫₀¹ x√(1 + x²) dx. Misal u = 1 + x², du = 2x dx, jadi x dx = du/2. Batas: x = 0 memberi u = 1, dan x = 1 memberi u = 2. Maka ½ ∫₁² √u du = ½ · (2/3) u^(3/2) dari 1 sampai 2 = (2√2 − 1)/3 ≈ 0,61.</p></div>
+<p><strong>Partielle Integration</strong> (kebalikan Produktregel):</p>
+<div class="tex">\int u\,v'\,dx = u\,v - \int u'\,v\,dx</div>
+<p>Pilih u sebagai bagian yang jadi lebih sederhana setelah diturunkan (biasanya polinom atau ln x), dan v′ sebagai bagian yang mudah diintegralkan (eˣ, sin x, cos x).</p>
+<div class="example"><p><strong>Contoh 8.</strong> ∫ x eˣ dx. Pilih u = x dan v′ = eˣ, jadi u′ = 1 dan v = eˣ. Maka x eˣ − ∫ eˣ dx = (x − 1)eˣ + C.</p></div>
+<div class="example"><p><strong>Contoh 9.</strong> ∫₁^e ln x dx. Pilih u = ln x dan v′ = 1, jadi u′ = 1/x dan v = x. Maka [x ln x − x] dari 1 sampai e = (e − e) − (0 − 1) = 1.</p></div>
+<h3 id="65-volume-benda-putar-rotationskorper">6.5 Volume benda putar (Rotationskörper)</h3>
+<p>Jika grafik f pada [a; b] diputar mengelilingi sumbu x:</p>
+<div class="tex">V = \pi \int_a^b \big(f(x)\big)^2\,dx</div>
+<div class="example"><p><strong>Contoh 10.</strong> f(x) = √x pada [0; 4].</p><p>V = π ∫₀⁴ x dx = π · [x²/2] dari 0 sampai 4 = 8π ≈ 25,1.</p></div>
+
+<h3 id="66-integral-tak-wajar-uneigentliche-integrale">6.6 Integral tak wajar (Uneigentliche Integrale)</h3>
+<p>Batas atas tak hingga dihitung sebagai limit:</p>
+<div class="tex">\int_1^\infty \frac{1}{x^2}\,dx = \lim_{b \to \infty} \Big[-\frac{1}{x}\Big]_1^b = \lim_{b \to \infty}\left(1 - \frac{1}{b}\right) = 1</div>
+<p>Sebaliknya ∫₁^∞ 1/x dx divergen, karena ln b → ∞. Gagasan “luas tak hingga bisa bernilai berhingga” ini sering muncul sebagai soal.</p>
+<h3 id="latihan-6">Latihan 6</h3>
+<ul>
+<li><strong>6.1</strong> Tentukan antiturunan: (a) 3x² − 4x + 5; (b) 1/x² + √x; (c) e^(2x) + sin(3x); (d) 1/(2x + 1).</li>
+<li><strong>6.2</strong> Hitung ∫₁³ (2x + 1) dx.</li>
+<li><strong>6.3</strong> Hitung ∫₀^(π/2) cos x dx.</li>
+<li><strong>6.4</strong> Hitung luas daerah antara f(x) = x² − 2x − 3 dan sumbu x.</li>
+<li><strong>6.5</strong> Hitung luas daerah yang dibatasi f(x) = x³ dan g(x) = x.</li>
+<li><strong>6.6</strong> Hitung ∫₀^(2π) sin x dx dan luas antara grafik sin x dan sumbu x pada [0; 2π].</li>
+<li><strong>6.7</strong> Dengan substitusi: (a) ∫ 2x/(x² + 1) dx; (b) ∫₀¹ x e^(x²) dx; (c) ∫ cos x · sin³x dx.</li>
+<li><strong>6.8</strong> Dengan integrasi parsial: (a) ∫ x e^(−x) dx; (b) ∫₀^π x sin x dx; (c) ∫₁^e x ln x dx.</li>
+<li><strong>6.9</strong> Kerucut dibuat dengan memutar f(x) = x/2 pada [0; 6] mengelilingi sumbu x. Hitung volumenya, lalu cocokkan dengan rumus kerucut (1/3)πr²h.</li>
+<li><strong>6.10</strong> Hitung (a) ∫₁^∞ 1/x³ dx dan (b) ∫₀^∞ e^(−2x) dx.</li>
+<li><strong>6.11</strong> Kecepatan suatu benda v(t) = 6t − t² (m/s) untuk 0 ≤ t ≤ 6. Hitung jarak yang ditempuh dan kecepatan rata-ratanya. Beri Antwortsatz.</li>
+</ul><div class="actions"><a class="btn" href="kunci.html#kunci-latihan-6-integral">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="bab-5.html"><small>Sebelumnya</small><span>Turunan dan Kurvendiskussion</span></a><a class="pn-next" href="bab-7.html"><small>Berikutnya</small><span>Barisan dan Deret</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

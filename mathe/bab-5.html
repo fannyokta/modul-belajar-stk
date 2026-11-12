@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turunan dan Kurvendiskussion · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-5">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item active" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 5</p>
+<h1>Turunan dan Kurvendiskussion</h1>
+<p class="sub">Differentialrechnung</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#51-definisi-turunan-ableitung">5.1 Definisi turunan (Ableitung)</a></li><li><a href="#52-aturan-turunan">5.2 Aturan turunan</a></li><li><a href="#53-kurvendiskussion-urutan-kerja">5.3 Kurvendiskussion: urutan kerja</a></li><li><a href="#54-soal-optimasi-extremwertaufgaben">5.4 Soal optimasi (Extremwertaufgaben)</a></li><li><a href="#55-dua-alat-bantu-tambahan">5.5 Dua alat bantu tambahan</a></li><li><a href="#latihan-5">Latihan 5</a></li></ul></aside><p>Ini bab terpenting di T-Kurs. Hampir setiap ujian memuat satu soal <strong>Kurvendiskussion</strong> (analisis lengkap grafik) dan satu soal <strong>Extremwertaufgabe</strong> (optimasi). Targetnya: bisa menurunkan fungsi apa pun dengan lancar, lalu memakai turunan untuk menganalisis grafik.</p>
+<h3 id="51-definisi-turunan-ableitung">5.1 Definisi turunan (Ableitung)</h3>
+<p>Turunan adalah kemiringan garis singgung (<strong>Tangente</strong>), atau laju perubahan sesaat:</p>
+<div class="tex">f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}</div>
+<p>Bentuk di dalam limit disebut <strong>Differenzenquotient</strong> (kemiringan garis potong, laju perubahan rata-rata), dan limitnya disebut <strong>Differentialquotient</strong>.</p>
+<div class="example"><p><strong>Contoh 1.</strong> f(x) = x².</p><p>((x + h)² − x²)/h = (2xh + h²)/h = 2x + h, dan untuk h → 0 hasilnya f′(x) = 2x.</p></div>
+
+<p><strong>Garis singgung dan garis normal</strong> di titik x₀:</p>
+<div class="tex">\text{Tangente: } y = f'(x_0)\,(x - x_0) + f(x_0), \qquad \text{Normale: } y = -\frac{1}{f'(x_0)}\,(x - x_0) + f(x_0)</div>
+<h3 id="52-aturan-turunan">5.2 Aturan turunan</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Fungsi</th>
+<th>Turunan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xⁿ</td>
+<td>n · xⁿ⁻¹ (<strong>Potenzregel</strong>; berlaku juga untuk √x = x^(1/2) dan 1/x = x⁻¹)</td>
+</tr>
+<tr>
+<td>eˣ</td>
+<td>eˣ</td>
+</tr>
+<tr>
+<td>aˣ</td>
+<td>aˣ · ln a</td>
+</tr>
+<tr>
+<td>ln x</td>
+<td>1/x</td>
+</tr>
+<tr>
+<td>sin x</td>
+<td>cos x</td>
+</tr>
+<tr>
+<td>cos x</td>
+<td>−sin x</td>
+</tr>
+<tr>
+<td>tan x</td>
+<td>1/cos²x</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tex">(u \cdot v)' = u'v + uv' \quad \text{(Produktregel)}, \qquad \left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2} \quad \text{(Quotientenregel)}</div>
+<div class="tex">\big(f(g(x))\big)' = f'(g(x)) \cdot g'(x) \quad \text{(Kettenregel: luar dikali dalam)}</div>
+<div class="example"><p><strong>Contoh 2 (Produktregel).</strong> f(x) = x² e^(3x).</p><p>u = x² dan v = e^(3x), sehingga u′ = 2x dan v′ = 3e^(3x) (Kettenregel). Maka f′(x) = 2x e^(3x) + x² · 3e^(3x) = x e^(3x)(2 + 3x).</p></div>
+
+<div class="example"><p><strong>Contoh 3 (Quotientenregel).</strong> f(x) = (x² + 1)/(x − 1).</p><p>f′(x) = [2x(x − 1) − (x² + 1)·1]/(x − 1)² = (x² − 2x − 1)/(x − 1)².</p></div>
+
+<div class="example"><p><strong>Contoh 4 (Kettenregel).</strong></p><ul>
+<li>(sin(x²))′ = cos(x²) · 2x</li>
+<li>(ln(x² + 1))′ = 2x/(x² + 1)</li>
+<li>((3x − 2)⁵)′ = 5(3x − 2)⁴ · 3 = 15(3x − 2)⁴</li>
+<li>(√(1 + x²))′ = x/√(1 + x²)</li>
+</ul></div>
+
+<div class="example"><p><strong>Contoh 5 (garis singgung).</strong> f(x) = x³ − 2x di x = 1.</p><p>f(1) = −1 dan f′(x) = 3x² − 2, jadi f′(1) = 1. Tangente: y = 1·(x − 1) − 1 = x − 2. Normale (kemiringan −1): y = −(x − 1) − 1 = −x.</p></div>
+
+<h3 id="53-kurvendiskussion-urutan-kerja">5.3 Kurvendiskussion: urutan kerja</h3>
+<ol>
+<li><strong>Definitionsmenge dan Symmetrie.</strong> Periksa f(−x).</li>
+<li><strong>Nullstellen</strong> dan titik potong sumbu y f(0).</li>
+<li><strong>Verhalten im Unendlichen</strong> (dan asimtot, jika fungsinya rasional atau eksponen).</li>
+<li><strong>Extrempunkte:</strong> hitung f′ dan f″. Syarat perlu (<strong>notwendige Bedingung</strong>): f′(x₀) = 0. Syarat cukup (<strong>hinreichende Bedingung</strong>): f″(x₀) &lt; 0 memberi <strong>Hochpunkt</strong> (maksimum lokal), dan f″(x₀) &gt; 0 memberi <strong>Tiefpunkt</strong> (minimum lokal).</li>
+<li><strong>Wendepunkte:</strong> f″(x₀) = 0 dan f‴(x₀) ≠ 0. Titik belok adalah tempat grafik berganti arah lengkung.</li>
+<li><strong>Monotonie dan Krümmung:</strong> f′ &gt; 0 berarti grafik naik, dan f″ &gt; 0 berarti grafik cekung ke atas (linkskurve), f″ &lt; 0 berarti cekung ke bawah (rechtskurve).</li>
+<li><strong>Wertetabelle</strong> beberapa titik, lalu <strong>sketsa</strong>.</li>
+</ol>
+<p>Satu catatan penting: jika f′(x₀) = 0 dan f″(x₀) = 0, kriteria f″ tidak cukup, dan kamu perlu memeriksa perubahan tanda f′ (<strong>Vorzeichenwechsel</strong>).</p>
+<div class="example"><p><strong>Contoh 6 (lengkap).</strong> f(x) = x³ − 6x² + 9x.</p><ul>
+<li><strong>Turunan:</strong> f′(x) = 3x² − 12x + 9 = 3(x − 1)(x − 3), f″(x) = 6x − 12, f‴(x) = 6.</li>
+<li><strong>Simetri:</strong> tidak ada (campuran pangkat ganjil dan genap).</li>
+<li><strong>Nol:</strong> f(x) = x(x − 3)², jadi x = 0 (nol tunggal) dan x = 3 (nol ganda). Titik potong sumbu y: 0.</li>
+<li><strong>Perilaku tak hingga:</strong> derajat 3 dengan koefisien positif, jadi x → +∞ memberi +∞ dan x → −∞ memberi −∞.</li>
+<li><strong>Ekstrem:</strong> f′ = 0 di x = 1 dan x = 3. f″(1) = −6 &lt; 0, jadi <strong>H(1|4)</strong> karena f(1) = 1 − 6 + 9 = 4. f″(3) = 6 &gt; 0, jadi <strong>T(3|0)</strong> (konsisten dengan nol ganda di x = 3).</li>
+<li><strong>Titik belok:</strong> f″ = 0 di x = 2, dan f‴ = 6 ≠ 0. f(2) = 8 − 24 + 18 = 2, jadi <strong>W(2|2)</strong>. Kemiringan garis singgung di titik belok f′(2) = −3.</li>
+<li><strong>Monotonie:</strong> naik pada (−∞; 1) dan (3; ∞), turun pada (1; 3). <strong>Krümmung:</strong> cekung ke bawah untuk x &lt; 2, cekung ke atas untuk x &gt; 2.</li>
+</ul></div>
+
+<h3 id="54-soal-optimasi-extremwertaufgaben">5.4 Soal optimasi (Extremwertaufgaben)</h3>
+<p>Urutan kerja:</p>
+<ol>
+<li>Tentukan besaran yang dioptimalkan dan tulis sebagai <strong>Zielfunktion</strong>.</li>
+<li>Tulis syarat yang diketahui sebagai <strong>Nebenbedingung</strong>, lalu pakai untuk menyisakan satu peubah.</li>
+<li>Tentukan daerah definisi yang masuk akal (panjang tidak boleh negatif).</li>
+<li>Turunkan, selesaikan f′ = 0, dan uji dengan f″ (atau periksa ujung daerah).</li>
+<li>Hitung nilai optimumnya dan tulis <strong>Antwortsatz</strong>.</li>
+</ol>
+<div class="example"><p><strong>Contoh 7.</strong> Dari karton persegi 12 cm × 12 cm dibuat kotak tanpa tutup dengan memotong persegi sisi x di keempat sudutnya. Tentukan x agar volume maksimum.</p><p>Volume V(x) = x(12 − 2x)² dengan 0 &lt; x &lt; 6. Jabarkan: V(x) = 4x³ − 48x² + 144x. Maka V′(x) = 12x² − 96x + 144 = 12(x − 2)(x − 6), jadi x = 2 (x = 6 di luar daerah). V″(x) = 24x − 96, dan V″(2) = −48 &lt; 0, jadi itu maksimum. V(2) = 2 · 8² = 128. Antwortsatz: dengan x = 2 cm volume kotak maksimum, yaitu 128 cm³.</p></div>
+
+<h3 id="55-dua-alat-bantu-tambahan">5.5 Dua alat bantu tambahan</h3>
+<p><strong>Aturan L’Hôpital</strong> (untuk bentuk 0/0 atau ∞/∞):</p>
+<div class="tex">\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}</div>
+<p>Contoh: lim (eˣ − 1)/x untuk x → 0 sama dengan lim eˣ/1 = 1.</p>
+<p><strong>Newton-Verfahren</strong> (pendekatan nol fungsi secara berulang):</p>
+<div class="tex">x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}</div>
+<p>Contoh: f(x) = x² − 2 dengan x₀ = 1,5. Maka f(1,5) = 0,25 dan f′(1,5) = 3, sehingga x₁ = 1,5 − 0,25/3 ≈ 1,4167 (nilai sebenarnya √2 ≈ 1,4142).</p>
+<h3 id="latihan-5">Latihan 5</h3>
+<ul>
+<li><strong>5.1</strong> Turunkan f(x) = x² + 3x dengan definisi (Differentialquotient).</li>
+<li><strong>5.2</strong> Turunkan: (a) 4x³ − 5x² + 7x − 2; (b) 3√x + 2/x; (c) x e^(−x); (d) x²/(x + 1); (e) ln(x² + 4x); (f) sin²x; (g) e^(x²−1); (h) cos(3x + 1).</li>
+<li><strong>5.3</strong> Tentukan persamaan Tangente dan Normale f(x) = x² − 4x + 5 di x = 3.</li>
+<li><strong>5.4</strong> Di titik mana grafik f(x) = x² − 6x + 10 memiliki garis singgung sejajar y = 2x?</li>
+<li><strong>5.5</strong> Lakukan Kurvendiskussion lengkap untuk f(x) = x³ − 3x.</li>
+<li><strong>5.6</strong> Lakukan Kurvendiskussion untuk f(x) = x⁴ − 2x², termasuk titik belok.</li>
+<li><strong>5.7</strong> Petani punya pagar sepanjang 60 m untuk kandang persegi panjang yang satu sisinya berupa dinding (tidak perlu pagar). Berapa ukuran agar luasnya maksimum? Beri Antwortsatz.</li>
+<li><strong>5.8</strong> Kaleng silinder bervolume 500 cm³. Tentukan jari-jari dan tinggi agar luas permukaannya minimum.</li>
+<li><strong>5.9</strong> Dengan Newton-Verfahren untuk f(x) = x³ − 2 dan x₀ = 1,5, hitung x₁ dan x₂.</li>
+<li><strong>5.10</strong> Hitung dengan L’Hôpital: (a) lim (e^(2x) − 1)/x untuk x → 0; (b) lim (1 − cos x)/x² untuk x → 0; (c) lim x²/eˣ untuk x → ∞.</li>
+</ul><div class="actions"><a class="btn" href="kunci.html#kunci-latihan-5-turunan">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="bab-4.html"><small>Sebelumnya</small><span>Limit dan Kekontinuan</span></a><a class="pn-next" href="bab-6.html"><small>Berikutnya</small><span>Integral</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

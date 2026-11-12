@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statistika dan Peluang · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-11">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item active" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 11</p>
+<h1>Statistika dan Peluang</h1>
+<p class="sub">Stochastik</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#111-statistik-deskriptif">11.1 Statistik deskriptif</a></li><li><a href="#112-kombinatorika-kombinatorik">11.2 Kombinatorika (Kombinatorik)</a></li><li><a href="#113-peluang-wahrscheinlichkeit">11.3 Peluang (Wahrscheinlichkeit)</a></li><li><a href="#114-distribusi-binomial-binomialverteilung">11.4 Distribusi binomial (Binomialverteilung)</a></li><li><a href="#115-distribusi-normal-normalverteilung">11.5 Distribusi normal (Normalverteilung)</a></li><li><a href="#latihan-11">Latihan 11</a></li></ul></aside><p>Cakupan Stochastik di T-Kurs berbeda-beda antar Kolleg, jadi cek silabus dulu. Bab ini menyiapkan inti yang paling sering dipakai: statistik deskriptif, kombinatorika, peluang bersyarat, distribusi binomial, dan distribusi normal.</p>
+<h3 id="111-statistik-deskriptif">11.1 Statistik deskriptif</h3>
+<div class="tex">\bar x = \frac{1}{n}\sum_{i=1}^{n} x_i, \qquad \sigma^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar x)^2, \qquad s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar x)^2</div>
+<p><strong>Mittelwert</strong> (rata-rata), <strong>Median</strong> (nilai tengah setelah diurutkan), <strong>Varianz</strong> (ragam), dan <strong>Standardabweichung</strong> (simpangan baku, akar ragam). Pembagi n dipakai untuk seluruh populasi, sedangkan n − 1 dipakai untuk <strong>Stichprobe</strong> (sampel). Selalu baca soal untuk melihat mana yang diminta.</p>
+<div class="example"><p><strong>Contoh 1.</strong> Data 2, 4, 4, 4, 5, 5, 7, 9. Rata-rata = 40/8 = 5. Jumlah kuadrat selisih = 9 + 1 + 1 + 1 + 0 + 0 + 4 + 16 = 32. Ragam populasi σ² = 32/8 = 4, jadi σ = 2. Ragam sampel s² = 32/7 ≈ 4,57.</p></div>
+<h3 id="112-kombinatorika-kombinatorik">11.2 Kombinatorika (Kombinatorik)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Situasi</th>
+<th>Rumus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mengurutkan n objek berbeda (Permutation)</td>
+<td>n!</td>
+</tr>
+<tr>
+<td>Memilih k dari n, urutan penting, boleh berulang</td>
+<td>nᵏ</td>
+</tr>
+<tr>
+<td>Memilih k dari n, urutan penting, tanpa ulang</td>
+<td>n!/(n − k)!</td>
+</tr>
+<tr>
+<td>Memilih k dari n, urutan tidak penting, tanpa ulang</td>
+<td>C(n, k) = n!/(k!(n − k)!)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Untuk <strong>Binomialkoeffizient</strong> berlaku C(n, k) = C(n, n − k), dan di kalkulator tombolnya biasanya nCr.</p>
+<div class="example"><p><strong>Contoh 2.</strong> PIN 4 angka (boleh berulang): 10⁴ = 10.000 kemungkinan. Juara 1, 2, 3 dari 5 pelari: 5·4·3 = 60. Memilih 3 orang dari 10 tanpa urutan: C(10, 3) = 120. Lotto 6 dari 49: C(49, 6) = 13.983.816.</p></div>
+<h3 id="113-peluang-wahrscheinlichkeit">11.3 Peluang (Wahrscheinlichkeit)</h3>
+<div class="tex">P(A) = \frac{\text{jumlah hasil yang menguntungkan}}{\text{jumlah semua hasil}} \ \ (\text{Laplace}), \qquad P(A \cup B) = P(A) + P(B) - P(A \cap B)</div>
+<div class="tex">P(A \mid B) = \frac{P(A \cap B)}{P(B)}, \qquad \text{bebas: } P(A \cap B) = P(A)\,P(B)</div>
+<p>Peluang bersyarat (<strong>bedingte Wahrscheinlichkeit</strong>) mudah dihitung dengan <strong>Baumdiagramm</strong> (diagram pohon): kalikan peluang di sepanjang cabang, lalu jumlahkan cabang yang relevan (<strong>Satz der totalen Wahrscheinlichkeit</strong>). Membalik arah syarat disebut <strong>Satz von Bayes</strong>.</p>
+<div class="example"><p><strong>Contoh 3.</strong> Mesin A menghasilkan 60% produk dan 2% di antaranya cacat. Mesin B menghasilkan 40% produk dan 5% di antaranya cacat. Peluang produk acak cacat: 0,6·0,02 + 0,4·0,05 = 0,012 + 0,020 = 0,032. Jika produk cacat, peluang berasal dari mesin A: 0,012/0,032 = 0,375.</p></div>
+<h3 id="114-distribusi-binomial-binomialverteilung">11.4 Distribusi binomial (Binomialverteilung)</h3>
+<p>Syaratnya: n percobaan bebas, tiap percobaan hanya sukses atau gagal, dan peluang sukses p konstan.</p>
+<div class="tex">P(X = k) = \binom{n}{k}\, p^k\, (1-p)^{n-k}, \qquad E(X) = n\,p, \qquad \sigma = \sqrt{n\,p\,(1-p)}</div>
+<div class="example"><p><strong>Contoh 4.</strong> Peluang sebuah produk cacat 5% dan diambil 20 produk (n = 20, p = 0,05). P(X = 0) = 0,95²⁰ ≈ 0,3585. P(X = 1) = 20 · 0,05 · 0,95¹⁹ ≈ 0,3774. Jadi P(X ≤ 1) ≈ 0,7358 dan P(X ≥ 2) ≈ 0,2642. Nilai harapan E(X) = 1.</p></div>
+<div class="example"><p><strong>Contoh 5 (“minimal satu”).</strong> P(X ≥ 1) = 1 − (1 − p)ⁿ. Berapa produk minimal agar peluang menemukan setidaknya satu cacat sedikitnya 95%? 1 − 0,95ⁿ ≥ 0,95 memberi 0,95ⁿ ≤ 0,05, jadi n ≥ ln 0,05 / ln 0,95 ≈ 58,4. Antwortsatz: minimal 59 produk.</p></div>
+<h3 id="115-distribusi-normal-normalverteilung">11.5 Distribusi normal (Normalverteilung)</h3>
+<p>X berdistribusi normal N(μ; σ²) dengan rata-rata μ dan simpangan baku σ. Untuk menghitung peluang, bakukan (<strong>Standardisierung</strong>) dulu:</p>
+<div class="tex">Z = \frac{X - \mu}{\sigma}, \qquad P(X \le x) = \Phi\!\left(\frac{x - \mu}{\sigma}\right)</div>
+<p>Nilai Φ dibaca dari tabel (atau kalkulator). Beberapa nilai: Φ(1) ≈ 0,8413, Φ(1,5) ≈ 0,9332, Φ(2) ≈ 0,9772, dan Φ(−z) = 1 − Φ(z). Pegangan cepat: sekitar 68% data berada dalam ±1σ, 95% dalam ±2σ, dan 99,7% dalam ±3σ.</p>
+<div class="example"><p><strong>Contoh 6.</strong> Massa baut N(50; 2²) gram. P(X ≤ 53) = Φ((53 − 50)/2) = Φ(1,5) ≈ 0,9332. P(48 ≤ X ≤ 52) = Φ(1) − Φ(−1) = 2Φ(1) − 1 ≈ 0,6827.</p></div>
+<h3 id="latihan-11">Latihan 11</h3>
+<ul>
+<li><strong>11.1</strong> Data 1, 3, 4, 5, 7. Hitung rata-rata, median, σ² (populasi), σ, dan s² (sampel).</li>
+<li><strong>11.2</strong> Berapa banyak kata sandi 4 huruf dari 26 huruf (a) tanpa pengulangan dan (b) dengan pengulangan?</li>
+<li><strong>11.3</strong> Komite 4 orang dipilih dari 6 perempuan dan 5 laki-laki. Berapa cara agar tepat 2 perempuan?</li>
+<li><strong>11.4</strong> Dua dadu dilempar. Hitung P(jumlah 8) dan P(jumlah ≥ 10).</li>
+<li><strong>11.5</strong> Suatu penyakit memiliki prevalensi 1%. Tes mendeteksi 95% yang sakit (positif) dan salah menunjukkan positif pada 10% yang sehat. Hitung peluang hasil positif, lalu peluang benar-benar sakit jika hasilnya positif.</li>
+<li><strong>11.6</strong> Peluang komponen rusak 0,1 dan diambil 10 komponen. Hitung P(X = 2), E(X), dan P(X ≥ 1).</li>
+<li><strong>11.7</strong> Peluang sukses satu percobaan 0,2. Berapa percobaan minimal agar peluang sedikitnya satu sukses ≥ 0,9?</li>
+<li><strong>11.8</strong> Tinggi bibit N(120; 8²) cm. Hitung P(X ≤ 136), P(112 ≤ X ≤ 128), dan P(X &gt; 128). Pakai Φ(1) ≈ 0,8413 dan Φ(2) ≈ 0,9772.</li>
+</ul><div class="actions"><a class="btn" href="kunci.html#kunci-latihan-11-stochastik">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="bab-10.html"><small>Sebelumnya</small><span>Bilangan Kompleks</span></a><a class="pn-next" href="bab-12.html"><small>Berikutnya</small><span>Simulasi Soal Campuran</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

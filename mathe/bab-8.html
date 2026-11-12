@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vektor dan Geometri Analitik · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-8">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item active" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 8</p>
+<h1>Vektor dan Geometri Analitik</h1>
+<p class="sub">Vektorrechnung</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#81-dasar-vektor-di-ruang">8.1 Dasar vektor di ruang</a></li><li><a href="#82-hasil-kali-titik-skalarprodukt">8.2 Hasil kali titik (Skalarprodukt)</a></li><li><a href="#83-hasil-kali-silang-kreuzprodukt-dan-spatprodukt">8.3 Hasil kali silang (Kreuzprodukt) dan Spatprodukt</a></li><li><a href="#84-garis-gerade">8.4 Garis (Gerade)</a></li><li><a href="#85-bidang-ebene">8.5 Bidang (Ebene)</a></li><li><a href="#latihan-8">Latihan 8</a></li></ul></aside><p>Di T-Kurs, geometri ruang hampir selalu diselesaikan dengan vektor: garis, bidang, jarak, dan sudut. Kuncinya adalah tiga alat (hasil kali titik, hasil kali silang, dan vektor normal) serta kebiasaan menulis persamaan dengan rapi.</p>
+<p><strong>Konvensi penulisan:</strong> titik ditulis P(1|2|3) seperti di Jerman. Vektor kolom ditulis datar dalam teks sebagai (1; 2; 3), tetapi tetap bermakna vektor kolom.</p>
+<h3 id="81-dasar-vektor-di-ruang">8.1 Dasar vektor di ruang</h3>
+<ul>
+<li><strong>Verbindungsvektor</strong> dari A ke B: AB = B − A (koordinat B dikurangi koordinat A).</li>
+<li><strong>Betrag</strong> (panjang): |a| = √(a₁² + a₂² + a₃²).</li>
+<li><strong>Titik tengah</strong> (Mittelpunkt) AB: M = (A + B)/2.</li>
+<li><strong>Einheitsvektor</strong> (vektor satuan) searah a: a/|a|.</li>
+<li><strong>Lineare Abhängigkeit:</strong> a dan b kolinear jika a = k · b untuk suatu bilangan k.</li>
+</ul>
+<div class="example"><p><strong>Contoh 1.</strong> A(1|2|3) dan B(4|6|15). Maka AB = (3; 4; 12), |AB| = √(9 + 16 + 144) = √169 = 13, dan M(2,5|4|9).</p></div>
+<h3 id="82-hasil-kali-titik-skalarprodukt">8.2 Hasil kali titik (Skalarprodukt)</h3>
+<div class="tex">\vec a \cdot \vec b = a_1 b_1 + a_2 b_2 + a_3 b_3 = |\vec a|\,|\vec b|\cos\varphi</div>
+<p>Dua vektor <strong>orthogonal</strong> (tegak lurus) jika dan hanya jika hasil kali titiknya 0. Sudut antarvektor:</p>
+<div class="tex">\cos\varphi = \frac{\vec a \cdot \vec b}{|\vec a|\,|\vec b|}</div>
+<div class="example"><p><strong>Contoh 2.</strong> a = (1; 2; 2) dan b = (2; −1; 2). a · b = 2 − 2 + 4 = 4, |a| = 3, |b| = 3. Maka cos φ = 4/9 dan φ ≈ 63,6°.</p></div>
+<h3 id="83-hasil-kali-silang-kreuzprodukt-dan-spatprodukt">8.3 Hasil kali silang (Kreuzprodukt) dan Spatprodukt</h3>
+<div class="tex">\vec a \times \vec b = \begin{pmatrix} a_2 b_3 - a_3 b_2 \\ a_3 b_1 - a_1 b_3 \\ a_1 b_2 - a_2 b_1 \end{pmatrix}</div>
+<p>a × b tegak lurus terhadap a dan b sekaligus, dan |a × b| adalah luas jajargenjang yang dibentuk a dan b. Luas segitiga = ½ |a × b|. Volume bangun yang dibentuk tiga vektor a, b, c (<strong>Spat</strong>, balok miring) adalah |(a × b) · c|, dan volume limas segitiga (tetrahedron) adalah 1/6 dari itu.</p>
+<div class="example"><p><strong>Contoh 3.</strong> a = (1; 2; 3) dan b = (0; 1; −1). Maka a × b = (2·(−1) − 3·1; 3·0 − 1·(−1); 1·1 − 2·0) = (−5; 1; 1). Cek ortogonal: a · (−5; 1; 1) = −5 + 2 + 3 = 0 ✓. Panjangnya √27 = 3√3.</p></div>
+<div class="example"><p><strong>Contoh 4.</strong> Luas segitiga A(1|0|0), B(0|2|0), C(0|0|3): AB = (−1; 2; 0) dan AC = (−1; 0; 3). AB × AC = (6; 3; 2), panjangnya √(36 + 9 + 4) = 7. Luas = 3,5.</p></div>
+<h3 id="84-garis-gerade">8.4 Garis (Gerade)</h3>
+<div class="tex">g:\; \vec x = \vec p + t\,\vec u, \qquad t \in \mathbb{R}</div>
+<p>dengan p vektor posisi satu titik pada garis (<strong>Stützvektor</strong>) dan u vektor arah (<strong>Richtungsvektor</strong>). Garis melalui dua titik A dan B: p = A dan u = B − A.</p>
+<p><strong>Posisi dua garis g dan h:</strong></p>
+<ul>
+<li>Vektor arah kelipatan satu sama lain: <strong>sejajar</strong> (parallel), atau <strong>berimpit</strong> (identisch) jika satu titik g juga ada di h.</li>
+<li>Tidak sejajar dan sistem persamaannya punya satu solusi: <strong>berpotongan</strong> (schneiden sich), dengan titik potong dari solusi itu.</li>
+<li>Tidak sejajar dan sistem persamaannya tak punya solusi: <strong>bersilangan</strong> (windschief).</li>
+</ul>
+<p>Sudut antargaris memakai |u · v|/(|u||v|), supaya sudutnya tidak lebih dari 90°.</p>
+<div class="example"><p><strong>Contoh 5 (titik potong dan sudut).</strong> g: x = (1; 2; 0) + t(1; 1; 2) dan h: x = (1; 3; 1) + s(1; 0; 1).</p><p>Samakan tiap koordinat. Dari x: 1 + t = 1 + s, jadi t = s. Dari y: 2 + t = 3, jadi t = 1 dan s = 1. Cek z: 2t = 2 dan 1 + s = 2 ✓. Titik potong: S(2|3|2). Sudut: u · v = 1 + 0 + 2 = 3, |u| = √6, |v| = √2, jadi cos φ = 3/√12 = √3/2 dan φ = 30°.</p></div>
+
+<div class="example"><p><strong>Contoh 6 (jarak titik ke garis).</strong> P(3|1|2) dan garis g: x = t(1; 2; 2). Jarak = |(P − Q) × u| / |u| dengan Q titik pada garis. Dengan Q = titik asal: (3; 1; 2) × (1; 2; 2) = (−2; −4; 5), panjangnya √45 = 3√5, dan |u| = 3. Jadi jaraknya √5 ≈ 2,24.</p></div>
+<p><strong>Jarak dua garis bersilangan</strong> dihitung dengan vektor normal n = u × v: d = |(Pₕ − P_g) · n| / |n|. Contoh: g melalui titik asal dengan arah (1; 0; 0), dan h melalui (0; 1; 0) dengan arah (0; 0; 1). n = (0; −1; 0), dan d = |(0; 1; 0) · (0; −1; 0)|/1 = 1.</p>
+<h3 id="85-bidang-ebene">8.5 Bidang (Ebene)</h3>
+<p>Tiga bentuk persamaan, dan kamu harus bisa mengubah satu ke yang lain:</p>
+<div class="tex">\text{Parameterform: } \vec x = \vec p + r\,\vec u + s\,\vec v</div>
+<div class="tex">\text{Normalenform: } \vec n \cdot (\vec x - \vec p) = 0, \qquad \text{Koordinatenform: } n_1 x + n_2 y + n_3 z = d</div>
+<div class="example"><p><strong>Contoh 7 (dari parameter ke koordinat).</strong> E: x = (1; 0; 2) + r(1; 1; 0) + s(0; 1; 1). Vektor normal n = (1; 1; 0) × (0; 1; 1) = (1; −1; 1). Maka x − y + z = d, dan titik (1|0|2) memberi d = 3. Jadi E: x − y + z = 3.</p></div>
+<div class="example"><p><strong>Contoh 8 (bidang melalui tiga titik).</strong> A(1|0|0), B(0|2|0), C(0|0|3). Dari Contoh 4, n = AB × AC = (6; 3; 2). Maka 6x + 3y + 2z = d dan A memberi d = 6, sehingga E: 6x + 3y + 2z = 6.</p></div>
+<p><strong>Jarak titik ke bidang</strong> (rumus <strong>Hessesche Normalenform</strong>):</p>
+<div class="tex">d(Q, E) = \frac{|n_1 q_1 + n_2 q_2 + n_3 q_3 - d|}{|\vec n|}</div>
+<p>Untuk Q(1|1|1) dan bidang pada Contoh 8: d = |6 + 3 + 2 − 6|/√49 = 5/7 ≈ 0,71.</p>
+<p><strong>Garis dan bidang.</strong> Substitusikan x, y, z dari persamaan garis ke persamaan bidang. Satu solusi t memberi titik tembus. Tidak ada solusi (0 = bilangan tak nol) berarti sejajar. Semua t berlaku berarti garis terletak di bidang. Sudut garis-bidang φ memenuhi sin φ = |n · u|/(|n||u|).</p>
+<p>Contoh: garis x = t(1; 1; 1) dan bidang pada Contoh 8. Substitusi: 6t + 3t + 2t = 6, jadi t = 6/11. Titik tembus (6/11 | 6/11 | 6/11). Sudutnya: sin φ = 11/(7√3) ≈ 0,907, jadi φ ≈ 65,1°.</p>
+<h3 id="latihan-8">Latihan 8</h3>
+<ul>
+<li><strong>8.1</strong> A(2|−1|3) dan B(5|3|15). Tentukan vektor AB, panjang |AB|, dan titik tengahnya.</li>
+<li><strong>8.2</strong> (a) Hitung sudut antara a = (1; 1; 0) dan b = (0; 1; 1). (b) Tentukan t agar (2; t; 1) tegak lurus terhadap (3; −4; −2).</li>
+<li><strong>8.3</strong> Hitung a × b untuk a = (2; 0; 1) dan b = (1; 3; −1). Cek ortogonalitasnya, lalu hitung luas jajargenjang.</li>
+<li><strong>8.4</strong> Hitung luas segitiga A(1|1|1), B(3|1|2), C(2|4|1).</li>
+<li><strong>8.5</strong> Hitung volume Spat yang dibentuk (1; 0; 0), (1; 2; 0), (1; 1; 3), dan volume tetrahedron yang sesuai.</li>
+<li><strong>8.6</strong> Periksa posisi g: x = (1; 2; 0) + t(1; 1; 2) terhadap h: x = (2; 0; 1) + s(2; 2; 4).</li>
+<li><strong>8.7</strong> g: x = (0; 1; 2) + t(2; 1; 0) dan h: x = (3; 4; 1) + s(1; −1; 1). Tentukan titik potong dan sudutnya.</li>
+<li><strong>8.8</strong> Hitung jarak P(2|0|0) ke garis x = t(0; 3; 4).</li>
+<li><strong>8.9</strong> Hitung jarak antara garis g: x = t(1; 1; 0) dan h: x = (0; 0; 2) + s(1; −1; 0), yang bersilangan.</li>
+<li><strong>8.10</strong> Tentukan persamaan koordinat bidang melalui A(2|0|0), B(0|3|0), C(0|0|6), lalu hitung jarak P(2|2|2) ke bidang itu.</li>
+<li><strong>8.11</strong> Ubah ke bentuk koordinat: E: x = (0; 1; 0) + r(1; 0; 2) + s(0; 1; 1).</li>
+<li><strong>8.12</strong> Tentukan titik tembus dan sudut antara garis x = t(1; 1; 1) dan bidang 2x + y − z = 1.</li>
+</ul><div class="actions"><a class="btn" href="kunci.html#kunci-latihan-8-vektor">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="bab-7.html"><small>Sebelumnya</small><span>Barisan dan Deret</span></a><a class="pn-next" href="bab-9.html"><small>Berikutnya</small><span>Matriks dan Sistem Persamaan Linear</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

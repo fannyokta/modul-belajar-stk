@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulasi Soal Campuran · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-12">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item active" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 12</p>
+<h1>Simulasi Soal Campuran</h1>
+<p class="sub">Probeklausur</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#aturan-main">Aturan main</a></li><li><a href="#aufgabe-1-kurvendiskussion-18-p">Aufgabe 1: Kurvendiskussion (18 P)</a></li><li><a href="#aufgabe-2-fungsi-eksponen-10-p">Aufgabe 2: Fungsi eksponen (10 P)</a></li><li><a href="#aufgabe-3-vektor-dan-bidang-14-p">Aufgabe 3: Vektor dan bidang (14 P)</a></li><li><a href="#aufgabe-4-sistem-persamaan-linear-6-p">Aufgabe 4: Sistem persamaan linear (6 P)</a></li><li><a href="#aufgabe-5-stochastik-8-p">Aufgabe 5: Stochastik (8 P)</a></li><li><a href="#aufgabe-6-optimasi-14-p">Aufgabe 6: Optimasi (14 P)</a></li><li><a href="#cara-menilai-hasilmu">Cara menilai hasilmu</a></li></ul></aside><p>Simulasi ini meniru gaya ujian T-Kurs: beberapa <strong>Aufgaben</strong> besar, tiap Aufgabe terdiri dari bagian (a), (b), (c), dan poin tertulis di tiap bagian. Susunan dan bobot sebenarnya berbeda tiap Kolleg, jadi anggap ini latihan stamina dan kebiasaan, bukan prediksi ujian.</p>
+<h3 id="aturan-main">Aturan main</h3>
+<ul>
+<li><strong>Waktu:</strong> 150 menit, dikerjakan sekaligus tanpa jeda dan tanpa melihat Lampiran A.</li>
+<li><strong>Alat:</strong> kalkulator (non-grafik, sesuai aturan Kolleg-mu) dan lembar rumus yang kamu susun sendiri dari Lampiran B.</li>
+<li><strong>Total:</strong> 70 poin. Tulis jalan penyelesaian lengkap, dan tutup soal cerita dengan Antwortsatz.</li>
+<li><strong>Strategi:</strong> 5 menit pertama untuk membaca semua soal. Kerjakan yang paling pasti dulu, dan jangan terpaku lebih dari 10 menit pada satu sub-soal.</li>
+</ul>
+<h3 id="aufgabe-1-kurvendiskussion-18-p">Aufgabe 1: Kurvendiskussion (18 P)</h3>
+<p>Diberikan f(x) = x³ − 3x² − 9x + 27.</p>
+<ul>
+<li>(a) Tunjukkan bahwa f(x) = (x − 3)²(x + 3) dan tentukan semua nol. (3 P)</li>
+<li>(b) Tentukan koordinat titik ekstrem dan titik belok, beserta jenis ekstremnya. (8 P)</li>
+<li>(c) Tentukan persamaan garis singgung di titik belok. (3 P)</li>
+<li>(d) Hitung luas daerah antara grafik dan sumbu x pada interval [−3; 3]. (4 P)</li>
+</ul>
+<h3 id="aufgabe-2-fungsi-eksponen-10-p">Aufgabe 2: Fungsi eksponen (10 P)</h3>
+<p>Diberikan f(x) = x · e^(−x) untuk x ≥ 0.</p>
+<ul>
+<li>(a) Tentukan nol f dan lim f(x) untuk x → ∞. (2 P)</li>
+<li>(b) Tentukan f′ dan f″, lalu koordinat Hochpunkt dan Wendepunkt. (5 P)</li>
+<li>(c) Hitung ∫₀ᵇ f(x) dx dengan integrasi parsial, lalu tentukan limitnya untuk b → ∞. (3 P)</li>
+</ul>
+<h3 id="aufgabe-3-vektor-dan-bidang-14-p">Aufgabe 3: Vektor dan bidang (14 P)</h3>
+<p>Diberikan A(2|0|0), B(0|4|0), C(0|0|4), dan D(2|2|2). Bidang E melalui A, B, dan C.</p>
+<ul>
+<li>(a) Tentukan persamaan E dalam bentuk koordinat. (3 P)</li>
+<li>(b) Hitung jarak D ke E. (3 P)</li>
+<li>(c) Tentukan titik kaki tegak lurus (Lotfußpunkt) dari D pada E. (4 P)</li>
+<li>(d) Hitung luas segitiga ABC. (4 P)</li>
+</ul>
+<h3 id="aufgabe-4-sistem-persamaan-linear-6-p">Aufgabe 4: Sistem persamaan linear (6 P)</h3>
+<p>Selesaikan dengan Gauß-Verfahren:</p>
+<div class="tex">\begin{aligned} 2x + y + z &amp;= 7 \\ x - y + 2z &amp;= 5 \\ 3x + 2y - z &amp;= 6 \end{aligned}</div>
+<h3 id="aufgabe-5-stochastik-8-p">Aufgabe 5: Stochastik (8 P)</h3>
+<p>Peluang sebuah komponen cacat adalah 4%. Dari produksi besar diambil 50 komponen secara acak. Misal X adalah banyak komponen cacat.</p>
+<ul>
+<li>(a) Mengapa X dapat dimodelkan dengan distribusi binomial? Sebutkan parameternya. (2 P)</li>
+<li>(b) Hitung P(X = 0). (2 P)</li>
+<li>(c) Hitung P(X ≤ 2). (2 P)</li>
+<li>(d) Hitung E(X) dan σ. (2 P)</li>
+</ul>
+<h3 id="aufgabe-6-optimasi-14-p">Aufgabe 6: Optimasi (14 P)</h3>
+<p>Sebuah jendela berbentuk persegi panjang dengan setengah lingkaran di atasnya. Lebar persegi panjang sama dengan diameter setengah lingkaran, yaitu 2r, dan tingginya h. Panjang total bingkai (dua sisi tegak, alas, dan busur setengah lingkaran, tanpa garis diameter di tengah) adalah 12 m.</p>
+<ul>
+<li>(a) Nyatakan h dalam r. (3 P)</li>
+<li>(b) Tuliskan luas jendela A sebagai fungsi r. (3 P)</li>
+<li>(c) Tentukan r agar luas maksimum, dan buktikan bahwa itu maksimum. (6 P)</li>
+<li>(d) Hitung luas maksimum dan tinggi h yang sesuai. (2 P)</li>
+</ul>
+<h3 id="cara-menilai-hasilmu">Cara menilai hasilmu</h3>
+<p>Periksa jawabanmu di Lampiran A dan beri poin sesuai langkah yang benar, bukan hanya hasil akhir. Skala nilai resmi berbeda tiap Kolleg. Sebagai pegangan belajar, targetkan skor di atas 70% pada dua simulasi berturut-turut sebelum merasa siap, dan catat sub-soal yang paling sering salah untuk dikerjakan ulang.</p><div class="actions"><a class="btn" href="kunci.html#kunci-probeklausur-bab-12">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="bab-11.html"><small>Sebelumnya</small><span>Statistika dan Peluang</span></a><a class="pn-next" href="kunci.html"><small>Berikutnya</small><span>Kunci Jawaban dan Pembahasan</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

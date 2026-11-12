@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aljabar Dasar · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-1">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item active" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 1</p>
+<h1>Aljabar Dasar</h1>
+<p class="sub">Algebra</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#11-pangkat-dan-akar-potenzen-und-wurzeln">1.1 Pangkat dan akar (Potenzen und Wurzeln)</a></li><li><a href="#12-persamaan-kuadrat-quadratische-gleichungen">1.2 Persamaan kuadrat (Quadratische Gleichungen)</a></li><li><a href="#13-persamaan-pecahan-bruchgleichungen">1.3 Persamaan pecahan (Bruchgleichungen)</a></li><li><a href="#14-persamaan-akar-wurzelgleichungen">1.4 Persamaan akar (Wurzelgleichungen)</a></li><li><a href="#15-nilai-mutlak-betrag">1.5 Nilai mutlak (Betrag)</a></li><li><a href="#16-pertidaksamaan-ungleichungen">1.6 Pertidaksamaan (Ungleichungen)</a></li><li><a href="#kesalahan-yang-paling-sering-terjadi">Kesalahan yang paling sering terjadi</a></li><li><a href="#latihan-1">Latihan 1</a></li></ul></aside><p>Sebagian besar kesalahan di bab-bab berikutnya bukan berasal dari kalkulus, tetapi dari aljabar yang goyah. Bab ini mengunci lima keterampilan: pangkat, persamaan kuadrat, persamaan pecahan dan akar, nilai mutlak, dan pertidaksamaan.</p>
+<h3 id="11-pangkat-dan-akar-potenzen-und-wurzeln">1.1 Pangkat dan akar (Potenzen und Wurzeln)</h3>
+<div class="tex">a^m \cdot a^n = a^{m+n}, \quad \frac{a^m}{a^n} = a^{m-n}, \quad (a^m)^n = a^{m n}, \quad a^{-n} = \frac{1}{a^n}, \quad a^{m/n} = \sqrt[n]{a^m}</div>
+<p>Rumus selisih kuadrat dan kuadrat sempurna (<strong>Binomische Formeln</strong>) sangat sering dipakai untuk memfaktorkan:</p>
+<div class="tex">(a+b)^2 = a^2 + 2ab + b^2, \quad (a-b)^2 = a^2 - 2ab + b^2, \quad (a+b)(a-b) = a^2 - b^2</div>
+<div class="example"><p><strong>Contoh 1.</strong> Sederhanakan (a³b⁻²)² : (a⁻¹b³).</p><p>Pangkatkan dulu: (a³b⁻²)² = a⁶b⁻⁴. Lalu bagi: a⁶⁻⁽⁻¹⁾ = a⁷ dan b⁻⁴⁻³ = b⁻⁷. Hasilnya a⁷/b⁷.</p></div>
+
+<h3 id="12-persamaan-kuadrat-quadratische-gleichungen">1.2 Persamaan kuadrat (Quadratische Gleichungen)</h3>
+<p>Di Jerman, rumus yang paling sering dipakai adalah <strong>pq-Formel</strong>. Pastikan bentuknya dulu x² + px + q = 0 (koefisien x² harus 1, jadi bagi dulu jika perlu).</p>
+<div class="tex">x^2 + px + q = 0 \;\Rightarrow\; x_{1,2} = -\frac{p}{2} \pm \sqrt{\left(\frac{p}{2}\right)^2 - q}</div>
+<p>Bagian di bawah akar disebut <strong>Diskriminante</strong> D = (p/2)² − q. Jika D &gt; 0 ada dua solusi, D = 0 satu solusi, D &lt; 0 tidak ada solusi real. Untuk bentuk umum ax² + bx + c = 0 dipakai abc-Formel:</p>
+<div class="tex">x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</div>
+<p><strong>Satz von Vieta</strong> (jumlah dan hasil kali akar): untuk x² + px + q = 0 berlaku x₁ + x₂ = −p dan x₁ · x₂ = q.</p>
+<p><strong>Satz vom Nullprodukt:</strong> hasil kali bernilai nol jika salah satu faktornya nol. Ini kunci menyelesaikan persamaan yang sudah terfaktor.</p>
+<div class="example"><p><strong>Contoh 2.</strong> 2x² − 8x − 10 = 0.</p><p>Bagi 2: x² − 4x − 5 = 0, jadi p = −4 dan q = −5. Maka x = 2 ± √(4 + 5) = 2 ± 3, yaitu x = 5 atau x = −1. Cek: 2·25 − 40 − 10 = 0 ✓.</p></div>
+
+<div class="example"><p><strong>Contoh 3 (substitusi, bikuadrat).</strong> x⁴ − 5x² + 4 = 0.</p><p>Misal z = x². Maka z² − 5z + 4 = 0, jadi z = 4 atau z = 1. Kembalikan: x² = 4 memberi x = ±2, dan x² = 1 memberi x = ±1. Himpunan penyelesaian (Lösungsmenge): 𝕃 = {−2, −1, 1, 2}.</p></div>
+
+<h3 id="13-persamaan-pecahan-bruchgleichungen">1.3 Persamaan pecahan (Bruchgleichungen)</h3>
+<p>Langkah wajib: tentukan dulu <strong>Definitionsmenge</strong> 𝔻, yaitu nilai x yang membuat penyebut nol dan harus dikeluarkan. Setelah itu kalikan kedua ruas dengan penyebut persekutuan. Di akhir, buang solusi yang tidak masuk 𝔻.</p>
+<div class="example"><p><strong>Contoh 4.</strong> 2/(x−1) + 3/(x+1) = 5/(x²−1).</p><p>Penyebut: x − 1 ≠ 0 dan x + 1 ≠ 0, jadi 𝔻 = ℝ \ {−1; 1}. Kalikan dengan (x−1)(x+1): 2(x+1) + 3(x−1) = 5, sehingga 5x − 1 = 5 dan x = 6/5. Nilai ini ada di 𝔻, jadi 𝕃 = {6/5}.</p></div>
+
+<h3 id="14-persamaan-akar-wurzelgleichungen">1.4 Persamaan akar (Wurzelgleichungen)</h3>
+<p>Isolasi akarnya, kuadratkan kedua ruas, selesaikan, lalu <strong>wajib diperiksa (Probe)</strong> karena mengkuadratkan bisa memunculkan solusi palsu.</p>
+<div class="example"><p><strong>Contoh 5.</strong> √(x+3) = x − 3.</p><p>Kuadratkan: x + 3 = x² − 6x + 9, jadi x² − 7x + 6 = 0, sehingga x = 6 atau x = 1. Probe untuk x = 6: √9 = 3 dan 6 − 3 = 3 ✓. Probe untuk x = 1: √4 = 2 tetapi 1 − 3 = −2 ✗. Jadi 𝕃 = {6}.</p></div>
+
+<h3 id="15-nilai-mutlak-betrag">1.5 Nilai mutlak (Betrag)</h3>
+<div class="tex">|x| = \begin{cases} x &amp; \text{jika } x \ge 0 \\ -x &amp; \text{jika } x &lt; 0 \end{cases}</div>
+<p>Untuk |u| = c dengan c &gt; 0: u = c atau u = −c. Jika ada x di kedua sisi, gunakan <strong>Fallunterscheidung</strong> (pisahkan kasus) dan periksa tiap kasus terhadap syaratnya.</p>
+<div class="example"><p><strong>Contoh 6.</strong> |x − 1| = 2x + 1.</p><p>Kasus x ≥ 1: x − 1 = 2x + 1, jadi x = −2, tetapi tidak memenuhi x ≥ 1. Kasus x &lt; 1: −(x − 1) = 2x + 1, jadi −x + 1 = 2x + 1 dan x = 0, yang memenuhi x &lt; 1 ✓. Probe: |0 − 1| = 1 = 2·0 + 1 ✓. Jadi 𝕃 = {0}.</p></div>
+
+<h3 id="16-pertidaksamaan-ungleichungen">1.6 Pertidaksamaan (Ungleichungen)</h3>
+<p>Aturan emas: <strong>kalikan atau bagi dengan bilangan negatif membalik tanda.</strong> Untuk pertidaksamaan kuadrat dan pecahan, cari titik nol lalu periksa tanda di tiap interval.</p>
+<div class="example"><p><strong>Contoh 7.</strong> x² − x − 6 &lt; 0.</p><p>Faktorkan: (x − 3)(x + 2) &lt; 0. Parabola terbuka ke atas, jadi nilainya negatif di antara kedua akar: 𝕃 = (−2; 3), kadang ditulis ]−2; 3[.</p></div>
+
+<div class="example"><p><strong>Contoh 8 (pecahan).</strong> (x+1)/(x−2) ≥ 0.</p><p>Pembilang nol di x = −1 dan penyebut nol di x = 2. Tanda pecahan positif untuk x &lt; −1, negatif untuk −1 &lt; x &lt; 2, dan positif untuk x &gt; 2. Karena ≥ 0, x = −1 ikut (pembilang nol) tetapi x = 2 tidak (penyebut nol). Jadi 𝕃 = (−∞; −1] ∪ (2; ∞). Jangan mengalikan dengan (x − 2) tanpa memisahkan kasus tandanya.</p></div>
+
+<h3 id="kesalahan-yang-paling-sering-terjadi">Kesalahan yang paling sering terjadi</h3>
+<ul>
+<li>Menjumlahkan pecahan dengan menjumlahkan penyebutnya.</li>
+<li>Lupa Probe pada persamaan akar dan persamaan nilai mutlak.</li>
+<li>Lupa membalik tanda saat mengalikan dengan bilangan negatif.</li>
+<li>Memakai pq-Formel padahal koefisien x² belum 1.</li>
+<li>Mencoret suku, bukan faktor: (x² + 3x)/x bukan x + 3x, tetapi x + 3.</li>
+</ul>
+<h3 id="latihan-1">Latihan 1</h3>
+<p>Kerjakan semua soal tanpa kalkulator kecuali diminta. Kunci ada di Lampiran A.</p>
+<ul>
+<li><strong>1.1</strong> Sederhanakan (2x³y⁻¹)³ : (4x⁻²y²).</li>
+<li><strong>1.2</strong> Hitung 27^(2/3) + 16^(−1/4).</li>
+<li><strong>1.3</strong> Selesaikan 3x² − 12x + 9 = 0.</li>
+<li><strong>1.4</strong> Selesaikan x² + 6x + 10 = 0.</li>
+<li><strong>1.5</strong> Selesaikan x⁴ − 13x² + 36 = 0.</li>
+<li><strong>1.6</strong> Selesaikan x/(x+2) + 1/(x−2) = 8/(x²−4). Tulis 𝔻 dan 𝕃.</li>
+<li><strong>1.7</strong> Selesaikan √(2x+1) = x − 1.</li>
+<li><strong>1.8</strong> Selesaikan |3x − 6| = 9.</li>
+<li><strong>1.9</strong> Selesaikan |x + 2| = 3x − 2.</li>
+<li><strong>1.10</strong> Selesaikan x² − 4x − 5 ≥ 0.</li>
+<li><strong>1.11</strong> Selesaikan (2x−1)/(x+3) &lt; 1.</li>
+<li><strong>1.12</strong> Selesaikan |x − 2| &lt; 3.</li>
+<li><strong>1.13</strong> Selesaikan x³ − 3x² − 4x = 0 (petunjuk: ambil faktor x dulu).</li>
+<li><strong>1.14</strong> Sebuah persegi panjang berkeliling 20 m dan berluas 21 m². Berapa panjang sisi-sisinya? (Petunjuk: pakai Vieta.) Tulis Antwortsatz.</li>
+</ul><div class="actions"><a class="btn" href="kunci.html#kunci-latihan-1-aljabar">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="panduan.html"><small>Sebelumnya</small><span>Panduan Pakai Modul</span></a><a class="pn-next" href="bab-2.html"><small>Berikutnya</small><span>Fungsi</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

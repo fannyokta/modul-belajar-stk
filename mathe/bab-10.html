@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bilangan Kompleks · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-10">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item active" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 10</p>
+<h1>Bilangan Kompleks</h1>
+<p class="sub">Komplexe Zahlen</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#101-bentuk-aljabar">10.1 Bentuk aljabar</a></li><li><a href="#102-bidang-gauss-dan-bentuk-polar">10.2 Bidang Gauss dan bentuk polar</a></li><li><a href="#103-penerapan-impedansi-arus-bolak-balik">10.3 Penerapan: impedansi (arus bolak-balik)</a></li><li><a href="#latihan-10">Latihan 10</a></li></ul></aside><p>Tidak semua Studienkolleg memasukkan topik ini, jadi cek silabus dulu. Jika masuk, soalnya relatif terprediksi: aritmetika dasar, bentuk polar, dan akar. Di teknik elektro, bilangan kompleks dipakai untuk menganalisis arus bolak-balik.</p>
+<h3 id="101-bentuk-aljabar">10.1 Bentuk aljabar</h3>
+<p>Satuan imajiner <strong>i</strong> didefinisikan oleh i² = −1. Bilangan kompleks z = a + bi dengan <strong>Realteil</strong> a = Re(z) dan <strong>Imaginärteil</strong> b = Im(z). Sekawan (<strong>konjugiert komplexe Zahl</strong>) z̄ = a − bi, dan panjang (<strong>Betrag</strong>) |z| = √(a² + b²). Berlaku z · z̄ = |z|².</p>
+<ul>
+<li><strong>Penjumlahan dan perkalian:</strong> seperti aljabar biasa, tetapi i² diganti −1.</li>
+<li><strong>Pembagian:</strong> kalikan pembilang dan penyebut dengan sekawan penyebut.</li>
+</ul>
+<div class="example"><p><strong>Contoh 1.</strong> (3 + 2i)(1 − i) = 3 − 3i + 2i − 2i² = 3 − i + 2 = 5 − i.</p></div>
+<div class="example"><p><strong>Contoh 2.</strong> (3 + 2i)/(1 − i). Kalikan dengan (1 + i)/(1 + i): pembilang 3 + 3i + 2i + 2i² = 1 + 5i, penyebut 1 + 1 = 2. Hasilnya (1 + 5i)/2 = 0,5 + 2,5i.</p></div>
+<div class="example"><p><strong>Contoh 3 (persamaan kuadrat).</strong> x² + 2x + 5 = 0 dengan D &lt; 0. Maka x = −1 ± √(1 − 5) = −1 ± 2i.</p></div>
+<h3 id="102-bidang-gauss-dan-bentuk-polar">10.2 Bidang Gauss dan bentuk polar</h3>
+<p>z = a + bi digambar sebagai titik (a; b) di <strong>Gaußsche Zahlenebene</strong>. Dengan jarak r = |z| dan sudut φ (argumen, diukur dari sumbu real positif):</p>
+<div class="tex">z = r(\cos\varphi + i\sin\varphi) = r\,e^{i\varphi}</div>
+<p>Dua bentuk terakhir dihubungkan rumus Euler e^(iφ) = cos φ + i sin φ. Keuntungan bentuk polar: perkalian menjadi mudah.</p>
+<div class="tex">z_1 z_2 = r_1 r_2\, e^{i(\varphi_1 + \varphi_2)}, \qquad z^n = r^n\,(\cos n\varphi + i\sin n\varphi) \quad \text{(Moivre)}</div>
+<p>Saat mencari φ, perhatikan kuadran titik. Jangan langsung memakai arctan(b/a) tanpa memeriksa tanda a dan b.</p>
+<div class="example"><p><strong>Contoh 4.</strong> z = 1 + i. Maka r = √2 dan φ = π/4 (kuadran I).</p></div>
+<div class="example"><p><strong>Contoh 5.</strong> z = −1 + √3 i. Maka r = 2, cos φ = −1/2, dan sin φ = √3/2, jadi φ = 2π/3 (kuadran II).</p></div>
+<div class="example"><p><strong>Contoh 6 (pangkat).</strong> (1 + i)⁸ = (√2)⁸ · (cos 8·π/4 + i sin 8·π/4) = 16 (cos 2π + i sin 2π) = 16.</p></div>
+<p><strong>Akar ke-n.</strong> Persamaan zⁿ = w dengan w = r_w · e^(iφ_w) punya tepat n solusi:</p>
+<div class="tex">z_k = \sqrt[n]{r_w}\; e^{\,i\,(\varphi_w + 2\pi k)/n}, \qquad k = 0, 1, \dots, n-1</div>
+<div class="example"><p><strong>Contoh 7.</strong> z³ = 8. Di sini r_w = 8 dan φ_w = 0, jadi zₖ = 2 e^(i·2πk/3). Untuk k = 0, 1, 2: z = 2, z = −1 + √3 i, dan z = −1 − √3 i. Ketiganya membentuk segitiga sama sisi pada lingkaran jari-jari 2.</p></div>
+<h3 id="103-penerapan-impedansi-arus-bolak-balik">10.3 Penerapan: impedansi (arus bolak-balik)</h3>
+<p>Di teknik elektro satuan imajiner sering ditulis <strong>j</strong> (karena i dipakai untuk arus). Impedansi seri hambatan R dan induktor adalah Z = R + jωL. Besarnya |Z| = √(R² + (ωL)²) dan beda fase φ = arctan(ωL/R).</p>
+<div class="example"><p><strong>Contoh 8.</strong> R = 30 Ω dan ωL = 40 Ω. Maka |Z| = √(900 + 1600) = 50 Ω dan φ = arctan(4/3) ≈ 53,1°.</p></div>
+<h3 id="latihan-10">Latihan 10</h3>
+<ul>
+<li><strong>10.1</strong> Hitung (2 − 3i) + (5 + i) dan (2 − 3i)(5 + i).</li>
+<li><strong>10.2</strong> Hitung (4 + 3i)/(2 − i).</li>
+<li><strong>10.3</strong> Tentukan |3 − 4i|, sekawannya, dan hasil kali keduanya.</li>
+<li><strong>10.4</strong> Selesaikan x² − 4x + 13 = 0.</li>
+<li><strong>10.5</strong> Ubah ke bentuk polar: (a) √3 + i; (b) −2i; (c) −1 − i.</li>
+<li><strong>10.6</strong> Hitung (1 − i)⁶.</li>
+<li><strong>10.7</strong> Tentukan semua solusi z⁴ = −16.</li>
+<li><strong>10.8</strong> Rangkaian seri dengan R = 60 Ω dan ωL = 80 Ω dihubungkan ke tegangan 230 V. Hitung |Z|, beda fase, dan besar arus. Beri Antwortsatz.</li>
+<li><strong>10.9</strong> Hitung e^(iπ/2) dan e^(iπ).</li>
+</ul><div class="actions"><a class="btn" href="kunci.html#kunci-latihan-10-bilangan-kompleks">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="bab-9.html"><small>Sebelumnya</small><span>Matriks dan Sistem Persamaan Linear</span></a><a class="pn-next" href="bab-11.html"><small>Berikutnya</small><span>Statistika dan Peluang</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

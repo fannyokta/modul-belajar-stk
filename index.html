@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modul Belajar STK</title>
+<meta name="description" content="Kumpulan modul belajar untuk persiapan Studienkolleg di Jerman, dikelompokkan per mata pelajaran.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/landing.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><span class="logo">S</span><span>Modul Belajar <em>STK</em></span></a>
+  <button class="chip" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+</header>
+<main>
+  <p class="eyebrow">Persiapan Studienkolleg</p>
+  <h1>Kumpulan modul belajar</h1>
+  <p class="lead">Materi persiapan Studienkolleg di Jerman, dikelompokkan per mata pelajaran. Pilih modul untuk mulai belajar.</p>
+
+  <h2>Matematika</h2>
+  <div class="grid">
+    <a class="card" href="mathe/index.html">
+      <span class="ic">∑</span>
+      <span class="ct">Matematika untuk Studienkolleg</span>
+      <span class="cx">Matematika kelas 12 untuk T-Kurs: 12 bab dengan contoh, latihan, kunci jawaban, glosarium Indonesia–Jerman, dan lembar rumus.</span>
+      <span class="meta">12 bab · Buka modul →</span>
+    </a>
+    <div class="card soon">
+      <span class="ic">+</span>
+      <span class="ct">Modul matematika berikutnya</span>
+      <span class="cx">Tempat untuk modul matematika lain.</span>
+      <span class="meta">Segera hadir</span>
+    </div>
+  </div>
+
+  <h2>Mata pelajaran lain</h2>
+  <div class="grid">
+    <div class="card soon">
+      <span class="ic">+</span>
+      <span class="ct">Modul baru</span>
+      <span class="cx">Fisika, bahasa Jerman, atau mata pelajaran lain akan muncul di sini.</span>
+      <span class="meta">Segera hadir</span>
+    </div>
+  </div>
+</main>
+<footer>Silabus tiap Studienkolleg berbeda. Cocokkan selalu dengan materi resmi Kolleg-mu.</footer>
+<script>
+document.getElementById('theme').addEventListener('click',function(){
+  var r=document.documentElement,
+      cur=r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'),
+      next=cur==='dark'?'light':'dark';
+  r.dataset.theme=next;
+  try{localStorage.setItem('theme',next);}catch(e){}
+});
+</script>
+</body>
+</html>

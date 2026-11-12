@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fungsi · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-2">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item active" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 2</p>
+<h1>Fungsi</h1>
+<p class="sub">Funktionen</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#21-sifat-dasar-fungsi">2.1 Sifat dasar fungsi</a></li><li><a href="#22-polinom-ganzrationale-funktionen">2.2 Polinom (Ganzrationale Funktionen)</a></li><li><a href="#23-fungsi-rasional-gebrochenrationale-funktionen">2.3 Fungsi rasional (Gebrochenrationale Funktionen)</a></li><li><a href="#24-eksponen-dan-logaritma-exponential-und-logarithmusfunktionen">2.4 Eksponen dan logaritma (Exponential- und Logarithmusfunktionen)</a></li><li><a href="#25-komposisi-dan-invers">2.5 Komposisi dan invers</a></li><li><a href="#26-transformasi-grafik">2.6 Transformasi grafik</a></li><li><a href="#latihan-2">Latihan 2</a></li></ul></aside><p>Kalkulus di Bab 4 sampai 6 hanyalah alat untuk menganalisis fungsi, jadi kemampuan membaca dan membuat sketsa fungsi menentukan hampir semuanya. Bab ini mencakup sifat dasar fungsi, polinom, fungsi rasional, eksponen dan logaritma, serta komposisi dan invers.</p>
+<h3 id="21-sifat-dasar-fungsi">2.1 Sifat dasar fungsi</h3>
+<ul>
+<li><strong>Definitionsmenge</strong> 𝔻: semua x yang boleh dimasukkan. Waspadai penyebut nol, akar dari bilangan negatif, dan logaritma dari bilangan tak positif.</li>
+<li><strong>Wertemenge</strong> 𝕎: semua nilai y yang mungkin dihasilkan.</li>
+<li><strong>Nullstellen:</strong> nilai x dengan f(x) = 0 (titik potong sumbu x).</li>
+<li><strong>Symmetrie:</strong> jika f(−x) = f(x), grafik simetris terhadap sumbu y (<strong>achsensymmetrisch</strong>, fungsi genap). Jika f(−x) = −f(x), grafik simetris terhadap titik asal (<strong>punktsymmetrisch</strong>, fungsi ganjil).</li>
+</ul>
+<h3 id="22-polinom-ganzrationale-funktionen">2.2 Polinom (Ganzrationale Funktionen)</h3>
+<p>Bentuk umum f(x) = aₙxⁿ + … + a₁x + a₀ dengan aₙ ≠ 0; n disebut <strong>Grad</strong> (derajat). Perilaku untuk x → ±∞ (<strong>Verhalten im Unendlichen</strong>) ditentukan oleh suku berpangkat tertinggi saja:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Derajat</th>
+<th>aₙ &gt; 0</th>
+<th>aₙ &lt; 0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Genap</td>
+<td>naik di kedua ujung (→ +∞ dan +∞)</td>
+<td>turun di kedua ujung (→ −∞ dan −∞)</td>
+</tr>
+<tr>
+<td>Ganjil</td>
+<td>x → −∞ memberi −∞, x → +∞ memberi +∞</td>
+<td>x → −∞ memberi +∞, x → +∞ memberi −∞</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Mencari nol polinom derajat 3 atau lebih:</strong></p>
+<ol>
+<li>Tebak satu nol di antara pembagi bilangan konstan (<strong>Absolutglied</strong>), mis. ±1, ±2, ±3, …</li>
+<li>Lakukan <strong>Polynomdivision</strong> dengan faktor (x − x₀).</li>
+<li>Selesaikan sisa persamaan kuadratnya dengan pq-Formel.</li>
+</ol>
+<div class="example"><p><strong>Contoh 1.</strong> f(x) = x³ − 2x² − 5x + 6.</p><p>Coba x = 1: 1 − 2 − 5 + 6 = 0, jadi x = 1 adalah nol. Pembagian: (x³ − 2x² − 5x + 6) : (x − 1) = x² − x − 6. Cek dengan mengalikan balik: (x − 1)(x² − x − 6) = x³ − 2x² − 5x + 6 ✓. Lalu x² − x − 6 = (x − 3)(x + 2), sehingga nolnya x = 1, x = 3, dan x = −2.</p></div>
+
+<p>Jika faktor (x − x₀) muncul dua kali, x₀ disebut nol ganda (<strong>doppelte Nullstelle</strong>): grafik menyentuh sumbu x tanpa memotongnya.</p>
+<h3 id="23-fungsi-rasional-gebrochenrationale-funktionen">2.3 Fungsi rasional (Gebrochenrationale Funktionen)</h3>
+<p>Bentuk f(x) = Z(x)/N(x) dengan pembilang Z dan penyebut N. Nol penyebut adalah <strong>Definitionslücke</strong>. Ada dua jenis:</p>
+<ul>
+<li><strong>Polstelle</strong> (asimtot tegak): nol penyebut yang bukan nol pembilang. Grafik meledak ke ±∞.</li>
+<li><strong>Hebbare Lücke</strong> (lubang): nol penyebut yang juga nol pembilang, sehingga faktornya bisa dicoret. Grafik hanya punya “lubang” di titik itu.</li>
+</ul>
+<p><strong>Asimtot untuk x → ±∞</strong> (bandingkan derajat pembilang dan penyebut):</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Derajat Z dibanding N</th>
+<th>Asimtot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lebih kecil</td>
+<td>y = 0 (waagerechte Asymptote)</td>
+</tr>
+<tr>
+<td>sama</td>
+<td>y = (koefisien utama Z) / (koefisien utama N)</td>
+</tr>
+<tr>
+<td>lebih besar satu</td>
+<td>asimtot miring (<strong>schräge Asymptote</strong>), dicari dengan Polynomdivision</td>
+</tr>
+</tbody>
+</table></div>
+<div class="example"><p><strong>Contoh 2.</strong> f(x) = (x² − 1)/(x² − 4).</p><p>Penyebut x² − 4 = (x − 2)(x + 2), jadi 𝔻 = ℝ \ {−2; 2}. Pembilang (x − 1)(x + 1) tidak berbagi faktor dengan penyebut, sehingga x = ±2 keduanya Polstelle. Nol: x = ±1. Derajat sama dengan koefisien utama 1 dan 1, jadi asimtot datar y = 1.</p></div>
+
+<div class="example"><p><strong>Contoh 3.</strong> f(x) = (x² + 1)/x = x + 1/x.</p><p>Polstelle di x = 0. Untuk |x| besar, 1/x → 0 sehingga grafik mendekati garis miring y = x.</p></div>
+
+<h3 id="24-eksponen-dan-logaritma-exponential-und-logarithmusfunktionen">2.4 Eksponen dan logaritma (Exponential- und Logarithmusfunktionen)</h3>
+<p>Fungsi eksponen f(x) = aˣ (a &gt; 0, a ≠ 1) dan khususnya <strong>e-Funktion</strong> f(x) = eˣ dengan e ≈ 2,718. Fungsi logaritma adalah inversnya: ln x = logₑ x.</p>
+<div class="tex">a^x = e^{x \ln a}, \qquad \ln(uv) = \ln u + \ln v, \qquad \ln\frac{u}{v} = \ln u - \ln v, \qquad \ln(u^r) = r \ln u</div>
+<div class="tex">a^x = b \;\Leftrightarrow\; x = \log_a b = \frac{\ln b}{\ln a}</div>
+<p>Sifat penting: eˣ &gt; 0 untuk semua x, dan ln x hanya terdefinisi untuk x &gt; 0.</p>
+<div class="example"><p><strong>Contoh 4.</strong> 2^(x+1) = 12.</p><p>x + 1 = ln 12 / ln 2 ≈ 3,585, jadi x ≈ 2,585. (Setara: x = log₂ 6.)</p></div>
+
+<div class="example"><p><strong>Contoh 5 (substitusi).</strong> e^(2x) − 3e^x + 2 = 0.</p><p>Misal z = eˣ (z &gt; 0): z² − 3z + 2 = 0, jadi z = 1 atau z = 2. Maka x = ln 1 = 0 atau x = ln 2.</p></div>
+
+<div class="example"><p><strong>Contoh 6 (logaritma).</strong> ln x + ln(x − 2) = ln 3.</p><p>Syarat: x &gt; 2. Gabungkan: ln(x(x − 2)) = ln 3, jadi x² − 2x − 3 = 0 dan x = 3 atau x = −1. Hanya x = 3 yang memenuhi syarat x &gt; 2. Jadi 𝕃 = {3}.</p></div>
+
+<div class="example"><p><strong>Contoh 7 (peluruhan).</strong> Zat radioaktif dengan waktu paruh (<strong>Halbwertszeit</strong>) 5 tahun. Kapan sisanya 10%?</p><p>Modelnya N(t) = N₀ · e^(−kt) dengan e^(−5k) = 1/2, jadi k = ln 2 / 5 ≈ 0,1386. Kita cari 0,1 = e^(−kt), sehingga t = ln 10 / k = 5 · ln 10 / ln 2 ≈ 16,6 tahun. Antwortsatz: setelah sekitar 16,6 tahun, sisanya tinggal 10%.</p></div>
+
+<h3 id="25-komposisi-dan-invers">2.5 Komposisi dan invers</h3>
+<p>Komposisi (<strong>Verkettung</strong>): (f ∘ g)(x) = f(g(x)), artinya kerjakan g dulu, baru f. Umumnya f ∘ g ≠ g ∘ f.</p>
+<p>Invers (<strong>Umkehrfunktion</strong>) f⁻¹ ada jika f satu-satu (injektif) pada daerahnya. Cara mencarinya: tulis y = f(x), tukar x dan y, lalu selesaikan untuk y. Grafik f⁻¹ adalah cermin grafik f terhadap garis y = x.</p>
+<div class="example"><p><strong>Contoh 8.</strong> f(x) = (x + 1)/(x − 2), x ≠ 2.</p><p>Tulis y = (x + 1)/(x − 2), jadi y(x − 2) = x + 1 dan yx − 2y = x + 1. Kumpulkan x: x(y − 1) = 2y + 1, sehingga x = (2y + 1)/(y − 1). Tukar nama peubah: f⁻¹(x) = (2x + 1)/(x − 1).</p></div>
+
+<h3 id="26-transformasi-grafik">2.6 Transformasi grafik</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Bentuk</th>
+<th>Pengaruh pada grafik f</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x) + b</td>
+<td>geser b satuan ke atas (ke bawah jika b &lt; 0)</td>
+</tr>
+<tr>
+<td>f(x − a)</td>
+<td>geser a satuan ke kanan (ke kiri jika a &lt; 0)</td>
+</tr>
+<tr>
+<td>c · f(x)</td>
+<td>regangan faktor c searah sumbu y (jika c &lt; 0, grafik juga dicerminkan terhadap sumbu x)</td>
+</tr>
+<tr>
+<td>f(bx)</td>
+<td>pemampatan faktor 1/b searah sumbu x (jika b &lt; 0, grafik juga dicerminkan terhadap sumbu y)</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="latihan-2">Latihan 2</h3>
+<ul>
+<li><strong>2.1</strong> Tentukan 𝔻 dan nol dari f(x) = √(x − 1) / (x − 4).</li>
+<li><strong>2.2</strong> Periksa simetri: f(x) = x⁴ − 3x² + 1, g(x) = x³ − x, h(x) = x² + x.</li>
+<li><strong>2.3</strong> Bagi (x³ − 6x² + 11x − 6) : (x − 1), lalu tentukan semua nolnya.</li>
+<li><strong>2.4</strong> Tentukan semua nol f(x) = x³ + 2x² − 5x − 6.</li>
+<li><strong>2.5</strong> Tentukan Verhalten im Unendlichen untuk f(x) = −2x⁵ + x² − 1.</li>
+<li><strong>2.6</strong> Untuk f(x) = (2x² − 2)/(x² − x − 2), tentukan 𝔻, nol, Polstelle, hebbare Lücke (beserta koordinatnya), dan asimtot datar.</li>
+<li><strong>2.7</strong> Selesaikan 3^(2x) − 4 · 3^x + 3 = 0.</li>
+<li><strong>2.8</strong> Selesaikan ln(x + 1) + ln(x − 1) = ln 8.</li>
+<li><strong>2.9</strong> Populasi bakteri 500 bertambah 15% tiap jam. Kapan populasinya mencapai 2000? Beri Antwortsatz.</li>
+<li><strong>2.10</strong> Tentukan f⁻¹ untuk f(x) = 3x − 6.</li>
+<li><strong>2.11</strong> Tentukan f⁻¹ dan daerah definisinya untuk f(x) = e^(2x) + 1.</li>
+<li><strong>2.12</strong> Untuk f(x) = x² dan g(x) = x + 3, tentukan f ∘ g dan g ∘ f.</li>
+<li><strong>2.13</strong> Grafik g(x) = −2(x − 1)² + 3 diperoleh dari y = x² dengan transformasi apa saja? Tentukan juga titik puncaknya.</li>
+<li><strong>2.14</strong> Zat dengan waktu paruh 8 hari, massa awal 80 mg. Berapa massa tersisa setelah 20 hari?</li>
+</ul><div class="actions"><a class="btn" href="kunci.html#kunci-latihan-2-fungsi">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="bab-1.html"><small>Sebelumnya</small><span>Aljabar Dasar</span></a><a class="pn-next" href="bab-3.html"><small>Berikutnya</small><span>Trigonometri</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

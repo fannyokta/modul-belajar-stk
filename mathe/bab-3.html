@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trigonometri · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-3">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item active" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 3</p>
+<h1>Trigonometri</h1>
+<p class="sub">Trigonometrie</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#31-radian-dan-lingkaran-satuan">3.1 Radian dan lingkaran satuan</a></li><li><a href="#32-identitas-penting">3.2 Identitas penting</a></li><li><a href="#33-grafik-sinus-dan-kosinus">3.3 Grafik sinus dan kosinus</a></li><li><a href="#34-persamaan-trigonometri">3.4 Persamaan trigonometri</a></li><li><a href="#35-segitiga-sembarang">3.5 Segitiga sembarang</a></li><li><a href="#latihan-3">Latihan 3</a></li></ul></aside><p>Di Jerman, sudut di kalkulus selalu dalam <strong>radian (Bogenmaß)</strong>, bukan derajat. Bab ini membangun kebiasaan itu, lalu membahas identitas, grafik, persamaan, dan penerapan pada segitiga.</p>
+<h3 id="31-radian-dan-lingkaran-satuan">3.1 Radian dan lingkaran satuan</h3>
+<div class="tex">180^\circ = \pi \text{ rad}, \qquad \alpha_{\text{rad}} = \alpha^\circ \cdot \frac{\pi}{180^\circ}</div>
+<p>Pada lingkaran satuan (jari-jari 1), titik untuk sudut x memiliki koordinat (cos x; sin x). Maka tan x = sin x / cos x, dan tan x tidak terdefinisi saat cos x = 0.</p>
+<p>Nilai istimewa yang <strong>harus hafal</strong>:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Sudut (derajat)</th>
+<th>0°</th>
+<th>30°</th>
+<th>45°</th>
+<th>60°</th>
+<th>90°</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sudut (radian)</td>
+<td>0</td>
+<td>π/6</td>
+<td>π/4</td>
+<td>π/3</td>
+<td>π/2</td>
+</tr>
+<tr>
+<td>sin</td>
+<td>0</td>
+<td>1/2</td>
+<td>√2/2</td>
+<td>√3/2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>cos</td>
+<td>1</td>
+<td>√3/2</td>
+<td>√2/2</td>
+<td>1/2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>tan</td>
+<td>0</td>
+<td>√3/3</td>
+<td>1</td>
+<td>√3</td>
+<td>tak terdefinisi</td>
+</tr>
+</tbody>
+</table></div>
+<p>Untuk sudut di kuadran lain, ubah ke sudut acuan lalu tentukan tandanya: sin positif di kuadran I dan II, cos positif di kuadran I dan IV, tan positif di kuadran I dan III.</p>
+<h3 id="32-identitas-penting">3.2 Identitas penting</h3>
+<div class="tex">\sin^2 x + \cos^2 x = 1</div>
+<div class="tex">\sin(\alpha \pm \beta) = \sin\alpha\cos\beta \pm \cos\alpha\sin\beta, \qquad \cos(\alpha \pm \beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta</div>
+<div class="tex">\sin 2x = 2\sin x\cos x, \qquad \cos 2x = \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1 - 2\sin^2 x</div>
+<p>Sifat simetri dan periode: sin(−x) = −sin x, cos(−x) = cos x, sin(π − x) = sin x, cos(π − x) = −cos x. Sinus dan kosinus berperiode 2π, tangen berperiode π.</p>
+<h3 id="33-grafik-sinus-dan-kosinus">3.3 Grafik sinus dan kosinus</h3>
+<p>Bentuk umum: f(x) = a · sin(b(x − c)) + d.</p>
+<ul>
+<li><strong>Amplitude:</strong> |a| (tinggi gelombang dari garis tengah).</li>
+<li><strong>Periode:</strong> 2π/|b| (panjang satu gelombang penuh).</li>
+<li><strong>Phasenverschiebung:</strong> c (geser ke kanan jika c &gt; 0).</li>
+<li><strong>Mittellinie:</strong> y = d (garis tengah), sehingga Wertemenge-nya [d − |a|; d + |a|].</li>
+</ul>
+<div class="example"><p><strong>Contoh 1.</strong> f(x) = 3 sin(2x − π) + 1.</p><p>Faktorkan b: 3 sin(2(x − π/2)) + 1. Jadi amplitudo 3, periode 2π/2 = π, geser π/2 ke kanan, garis tengah y = 1. Wertemenge: [−2; 4].</p></div>
+
+<h3 id="34-persamaan-trigonometri">3.4 Persamaan trigonometri</h3>
+<p>Selesaikan dulu di satu periode, lalu tambahkan kelipatan periode jika daerahnya tak dibatasi.</p>
+<div class="tex">\sin x = c: \; x = \arcsin c + 2k\pi \text{ atau } x = \pi - \arcsin c + 2k\pi</div>
+<div class="tex">\cos x = c: \; x = \pm \arccos c + 2k\pi, \qquad \tan x = c: \; x = \arctan c + k\pi \qquad (k \in \mathbb{Z})</div>
+<div class="example"><p><strong>Contoh 2.</strong> sin x = 1/2 pada [0; 2π).</p><p>arcsin(1/2) = π/6. Solusi kedua: π − π/6 = 5π/6. Jadi 𝕃 = {π/6; 5π/6}.</p></div>
+
+<div class="example"><p><strong>Contoh 3 (substitusi).</strong> 2cos²x − cos x − 1 = 0 pada [0; 2π).</p><p>Misal z = cos x: 2z² − z − 1 = 0, jadi z = (1 ± 3)/4, yaitu z = 1 atau z = −1/2. cos x = 1 memberi x = 0. cos x = −1/2 memberi x = 2π/3 dan x = 4π/3. Jadi 𝕃 = {0; 2π/3; 4π/3}.</p></div>
+
+<div class="example"><p><strong>Contoh 4 (sudut ganda).</strong> sin 2x = sin x pada [0; 2π).</p><p>2 sin x cos x − sin x = 0, sehingga sin x (2 cos x − 1) = 0. Dari sin x = 0 diperoleh x = 0 dan x = π. Dari cos x = 1/2 diperoleh x = π/3 dan x = 5π/3. Jadi 𝕃 = {0; π/3; π; 5π/3}. Jangan membagi dengan sin x, karena itu menghilangkan solusi.</p></div>
+
+<h3 id="35-segitiga-sembarang">3.5 Segitiga sembarang</h3>
+<div class="tex">\text{Sinussatz: } \frac{a}{\sin\alpha} = \frac{b}{\sin\beta} = \frac{c}{\sin\gamma}, \qquad \text{Kosinussatz: } c^2 = a^2 + b^2 - 2ab\cos\gamma</div>
+<div class="example"><p><strong>Contoh 5.</strong> a = 7, b = 9, γ = 60°. Cari c.</p><p>c² = 49 + 81 − 2·7·9·cos 60° = 130 − 63 = 67, jadi c = √67 ≈ 8,19.</p></div>
+
+<div class="example"><p><strong>Contoh 6.</strong> α = 40°, β = 65°, a = 10. Cari b.</p><p>b = a · sin β / sin α = 10 · sin 65° / sin 40° ≈ 14,10.</p></div>
+
+<p><strong>Perhatian kalkulator:</strong> sebelum menghitung, periksa mode <strong>DEG</strong> atau <strong>RAD</strong>. Kesalahan mode adalah penyebab nilai salah yang paling sering.</p>
+<h3 id="latihan-3">Latihan 3</h3>
+<ul>
+<li><strong>3.1</strong> Ubah 150° ke radian dan 7π/4 rad ke derajat.</li>
+<li><strong>3.2</strong> Tanpa kalkulator, hitung sin 120°, cos(5π/6), dan tan 225°.</li>
+<li><strong>3.3</strong> Jika sin α = 3/5 dan α di kuadran II, hitung cos α dan tan α.</li>
+<li><strong>3.4</strong> Sederhanakan (sin x + cos x)² − 2 sin x cos x.</li>
+<li><strong>3.5</strong> Buktikan sin 2x / (1 + cos 2x) = tan x.</li>
+<li><strong>3.6</strong> Tentukan amplitudo, periode, pergeseran fase, dan Wertemenge dari f(x) = 2 sin(3x − π/2) − 1.</li>
+<li><strong>3.7</strong> Selesaikan 2 sin x = √3 pada [0; 2π).</li>
+<li><strong>3.8</strong> Selesaikan 2cos²x + cos x − 1 = 0 pada [0; 2π).</li>
+<li><strong>3.9</strong> Selesaikan cos 2x = cos x pada [0; 2π).</li>
+<li><strong>3.10</strong> Selesaikan tan x = −1 pada [0; 2π).</li>
+<li><strong>3.11</strong> Pada segitiga, a = 5, b = 8, γ = 50°. Hitung sisi c.</li>
+<li><strong>3.12</strong> Sisi-sisi segitiga 6, 7, dan 9. Hitung sudut terbesar.</li>
+<li><strong>3.13</strong> Dari titik berjarak 40 m dari dasar menara, sudut elevasi puncak menara 35°. Berapa tinggi menara? Beri Antwortsatz.</li>
+</ul><div class="actions"><a class="btn" href="kunci.html#kunci-latihan-3-trigonometri">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="bab-2.html"><small>Sebelumnya</small><span>Fungsi</span></a><a class="pn-next" href="bab-4.html"><small>Berikutnya</small><span>Limit dan Kekontinuan</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

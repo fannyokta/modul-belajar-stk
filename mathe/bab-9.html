@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matriks dan Sistem Persamaan Linear · Matematika untuk Studienkolleg</title>
+<meta name="description" content="Modul matematika kelas 12 (wajib dan peminatan) untuk persiapan Studienkolleg T-Kurs di Jerman, dengan istilah Jerman.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="" data-slug="bab-9">
+<header class="top">
+  <button class="burger" id="burger" aria-label="Buka menu" aria-controls="side" aria-expanded="false">☰</button>
+  <a class="brand" href="index.html"><span class="logo">∑</span><span>Matematika untuk <em>Studienkolleg</em></span></a>
+  <div class="top-actions">
+    <a class="chip" href="../index.html">← Semua modul</a>
+    <a class="chip" href="rumus.html">Lembar rumus</a>
+    <button class="chip icon" id="theme" aria-label="Ganti tema terang/gelap">◐</button>
+  </div>
+</header>
+<div class="layout">
+<nav class="side" id="side" aria-label="Navigasi modul">
+<div class="grp">Mulai</div>
+<a class="nav-item" href="index.html" data-slug="index">Beranda<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="panduan.html" data-slug="panduan">Panduan pakai modul<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Bab</div>
+<a class="nav-item" href="bab-1.html" data-slug="bab-1"><b>1</b> Aljabar Dasar<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-2.html" data-slug="bab-2"><b>2</b> Fungsi<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-3.html" data-slug="bab-3"><b>3</b> Trigonometri<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-4.html" data-slug="bab-4"><b>4</b> Limit dan Kekontinuan<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-5.html" data-slug="bab-5"><b>5</b> Turunan dan Kurvendiskussion<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-6.html" data-slug="bab-6"><b>6</b> Integral<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-7.html" data-slug="bab-7"><b>7</b> Barisan dan Deret<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-8.html" data-slug="bab-8"><b>8</b> Vektor dan Geometri Analitik<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item active" href="bab-9.html" data-slug="bab-9"><b>9</b> Matriks dan Sistem Persamaan Linear<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-10.html" data-slug="bab-10"><b>10</b> Bilangan Kompleks<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-11.html" data-slug="bab-11"><b>11</b> Statistika dan Peluang<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="bab-12.html" data-slug="bab-12"><b>12</b> Simulasi Soal Campuran<span class="done" aria-hidden="true">✓</span></a>
+<div class="grp">Lampiran</div>
+<a class="nav-item" href="kunci.html" data-slug="kunci">A. Kunci jawaban<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="glosarium.html" data-slug="glosarium">B. Glosarium<span class="done" aria-hidden="true">✓</span></a>
+<a class="nav-item" href="rumus.html" data-slug="rumus">Lembar rumus<span class="done" aria-hidden="true">✓</span></a>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main class="content" id="main">
+<article>
+<p class="kicker">Bab 9</p>
+<h1>Matriks dan Sistem Persamaan Linear</h1>
+<p class="sub">Matrizen und LGS</p>
+<aside class="toc"><b>Di bab ini</b><ul><li><a href="#91-eliminasi-gauss-gau-verfahren">9.1 Eliminasi Gauss (Gauß-Verfahren)</a></li><li><a href="#92-aljabar-matriks">9.2 Aljabar matriks</a></li><li><a href="#93-penerapan-1-matriks-kebutuhan-bahan-materialverflechtung">9.3 Penerapan 1: matriks kebutuhan bahan (Materialverflechtung)</a></li><li><a href="#94-penerapan-2-matriks-transisi-ubergangsmatrix">9.4 Penerapan 2: matriks transisi (Übergangsmatrix)</a></li><li><a href="#latihan-9">Latihan 9</a></li></ul></aside><p><strong>LGS</strong> (Lineares Gleichungssystem) muncul di hampir semua soal teknik: geometri ruang, rangkaian listrik, dan keseimbangan bahan. Bab ini membahas metode eliminasi Gauss, aljabar matriks, determinan, dan dua penerapan khas ujian.</p>
+<h3 id="91-eliminasi-gauss-gau-verfahren">9.1 Eliminasi Gauss (Gauß-Verfahren)</h3>
+<p>Gagasan: kurangi persamaan dengan kelipatan persamaan lain sampai tinggal bentuk segitiga, lalu hitung dari bawah ke atas (<strong>Rückwärtseinsetzen</strong>). Tiga hasil yang mungkin:</p>
+<ul>
+<li><strong>Satu solusi tunggal</strong> (eindeutig lösbar).</li>
+<li><strong>Tak ada solusi</strong> (unlösbar): muncul baris yang kontradiktif seperti 0 = 5.</li>
+<li><strong>Tak hingga solusi</strong> (unendlich viele Lösungen): muncul baris 0 = 0, dan solusinya ditulis dengan satu atau lebih parameter.</li>
+</ul>
+<div class="example"><p><strong>Contoh 1 (solusi tunggal).</strong></p><div class="tex">\begin{aligned} x + y + z &amp;= 6 \\ 2x - y + z &amp;= 3 \\ x + 2y - z &amp;= 2 \end{aligned}</div><p>Persamaan 2 dikurangi 2 kali persamaan 1 memberi −3y − z = −9. Persamaan 3 dikurangi persamaan 1 memberi y − 2z = −4. Dari yang terakhir, y = 2z − 4. Masukkan ke −3y − z = −9: −6z + 12 − z = −9, jadi −7z = −21 dan z = 3. Maka y = 2 dan x = 6 − 2 − 3 = 1. Solusi: (x; y; z) = (1; 2; 3). Selalu cek di ketiga persamaan awal.</p></div>
+
+
+<div class="example"><p><strong>Contoh 2 (tak hingga solusi).</strong> x + y + z = 3, x − y = 1, 2x + z = 4.</p><p>Dari persamaan kedua y = x − 1, dan dari ketiga z = 4 − 2x. Masukkan ke yang pertama: x + (x − 1) + (4 − 2x) = 3, yaitu 3 = 3, yang selalu benar. Jadi ada tak hingga solusi: pilih x = t, maka y = t − 1 dan z = 4 − 2t. Himpunan penyelesaian: {(t; t − 1; 4 − 2t) | t ∈ ℝ}, yaitu sebuah garis di ruang.</p></div>
+
+<div class="example"><p><strong>Contoh 3 (tak ada solusi).</strong> x + y = 1 dan x + y = 2 saling bertentangan, jadi 𝕃 = {}.</p></div>
+<h3 id="92-aljabar-matriks">9.2 Aljabar matriks</h3>
+<p>Matriks m × n punya m baris dan n kolom. Penjumlahan dan perkalian skalar dilakukan entri demi entri. <strong>Perkalian matriks</strong> (<strong>Zeile mal Spalte</strong>): entri (i, j) hasil kali adalah hasil kali titik baris ke-i matriks pertama dengan kolom ke-j matriks kedua. Syaratnya jumlah kolom matriks pertama sama dengan jumlah baris matriks kedua.</p>
+<p>Perkalian matriks <strong>tidak komutatif</strong>: umumnya AB ≠ BA.</p>
+<div class="example"><p><strong>Contoh 4.</strong> Untuk A dan B berikut:</p><div class="tex">A = \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}, \quad B = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}, \quad AB = \begin{pmatrix} 2 &amp; 1 \\ 4 &amp; 3 \end{pmatrix}, \quad BA = \begin{pmatrix} 3 &amp; 4 \\ 1 &amp; 2 \end{pmatrix}</div></div>
+
+<p><strong>Determinan</strong> (Determinante):</p>
+<div class="tex">\det\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} = ad - bc, \qquad A^{-1} = \frac{1}{ad - bc}\begin{pmatrix} d &amp; -b \\ -c &amp; a \end{pmatrix}</div>
+<p>Matriks punya invers hanya jika determinannya tidak nol. Untuk 3 × 3 dipakai <strong>Sarrus</strong>: jumlahkan hasil kali tiga diagonal ke kanan-bawah, kurangi jumlah hasil kali tiga diagonal ke kiri-bawah.</p>
+<div class="example"><p><strong>Contoh 5 (Sarrus).</strong> Matriks dengan baris (1, 2, 0), (0, 1, 3), (2, 0, 1): diagonal turun 1·1·1 + 2·3·2 + 0·0·0 = 13, diagonal naik 0·1·2 + 1·3·0 + 2·0·1 = 0. Determinan = 13 − 0 = 13.</p></div>
+<div class="example"><p><strong>Contoh 6 (invers dan LGS).</strong> A dengan baris (2, 1) dan (5, 3). det = 6 − 5 = 1, jadi A⁻¹ punya baris (3, −1) dan (−5, 2). Untuk Ax = (3; 8): x = A⁻¹ · (3; 8) = (3·3 − 8; −5·3 + 2·8) = (1; 1). Cek: 2 + 1 = 3 dan 5 + 3 = 8 ✓.</p></div>
+<p>Hubungan dengan Bab 8: tiga vektor kolinear atau sebidang (<strong>komplanar</strong>) jika determinan matriks yang dibentuk dari ketiganya sama dengan 0.</p>
+<h3 id="93-penerapan-1-matriks-kebutuhan-bahan-materialverflechtung">9.3 Penerapan 1: matriks kebutuhan bahan (Materialverflechtung)</h3>
+<p>Baris matriks M adalah bahan baku dan kolomnya adalah produk, dengan entri banyaknya bahan per unit produk. Jika vektor produksi p, maka kebutuhan bahan = M · p.</p>
+<div class="example"><p><strong>Contoh 7.</strong> Dua produk P₁ dan P₂ memerlukan tiga bahan R₁, R₂, R₃ dengan M berbaris (2, 1), (1, 3), (0, 2). Untuk produksi p = (10; 20), kebutuhan bahan M · p = (2·10 + 1·20; 1·10 + 3·20; 0·10 + 2·20) = (40; 70; 40).</p></div>
+<h3 id="94-penerapan-2-matriks-transisi-ubergangsmatrix">9.4 Penerapan 2: matriks transisi (Übergangsmatrix)</h3>
+<p>Jika proporsi berpindah antarkeadaan tiap periode dengan kolom-kolom matriks berjumlah 1, maka keadaan berikutnya zₙ₊₁ = M · zₙ. <strong>Keadaan stasioner</strong> (stabil) z memenuhi M · z = z dengan jumlah komponen 1.</p>
+<div class="example"><p><strong>Contoh 8.</strong> Dua operator seluler A dan B. Tiap bulan 20% pelanggan A pindah ke B, dan 10% pelanggan B pindah ke A. Maka M berbaris (0,8; 0,1) dan (0,2; 0,9). Dari pembagian awal (0,5; 0,5), bulan berikutnya (0,8·0,5 + 0,1·0,5; 0,2·0,5 + 0,9·0,5) = (0,45; 0,55). Keadaan stasioner (a; b) dari 0,8a + 0,1b = a, yaitu b = 2a, dengan a + b = 1: a = 1/3 dan b = 2/3.</p></div>
+<h3 id="latihan-9">Latihan 9</h3>
+<ul>
+<li><strong>9.1</strong> Selesaikan x + y + z = 2, 2x − y + z = 5, x + 3y − z = −4.</li>
+<li><strong>9.2</strong> Tentukan himpunan penyelesaian x + y + z = 4, x − y + z = 2, 2x + 2z = 6, lalu tafsirkan secara geometri.</li>
+<li><strong>9.3</strong> Untuk nilai a berapa LGS x + 2y = 3 dan 2x + 4y = a tidak punya solusi, dan kapan punya tak hingga solusi?</li>
+<li><strong>9.4</strong> Hitung AB dan BA untuk A dengan baris (1, 0), (2, 1) dan B dengan baris (3, 1), (0, 2).</li>
+<li><strong>9.5</strong> Tentukan invers A dengan baris (3, 1), (5, 2), lalu selesaikan Ax = (5; 9).</li>
+<li><strong>9.6</strong> Hitung determinan matriks dengan baris (2, −1, 0), (1, 3, 2), (0, 1, 4).</li>
+<li><strong>9.7</strong> Dengan M pada Contoh 7, produksi p = (50; 30) dan stok bahan (140; 130; 70). Hitung kebutuhan bahan, lalu putuskan apakah stok cukup.</li>
+<li><strong>9.8</strong> Matriks transisi M dengan baris (0,7; 0,2) dan (0,3; 0,8). Dari keadaan awal (100; 200), hitung keadaan sesudah satu periode, lalu tentukan pembagian stasioner.</li>
+</ul><div class="actions"><a class="btn" href="kunci.html#kunci-latihan-9-matriks-dan-lgs">Cek jawabanmu di Lampiran A</a><button class="btn ghost" id="markdone">Tandai bab selesai</button></div>
+</article>
+<div class="pn"><a class="pn-prev" href="bab-8.html"><small>Sebelumnya</small><span>Vektor dan Geometri Analitik</span></a><a class="pn-next" href="bab-10.html"><small>Berikutnya</small><span>Bilangan Kompleks</span></a></div>
+<footer class="foot">Modul belajar matematika kelas 12 untuk persiapan Studienkolleg T-Kurs. Cocokkan selalu dengan silabus resmi Kolleg-mu.</footer>
+</main>
+</div>
+<script src="assets/katex/katex.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
